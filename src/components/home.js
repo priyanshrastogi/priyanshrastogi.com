@@ -23,7 +23,8 @@ class Home extends Component {
         tools: ["JS", "Python", "Node.js", 
                 "React", "Flask", "Django",
                 "Java", "Docker", "NumPy",
-                "Pandas", "Sklearn"]
+                "Pandas", "Sklearn", "Arduino",
+                "Raspberry Pi"]
     }
 }
 
