@@ -3,12 +3,22 @@
 export default () => {
     return [
         {
+            id: "parking-suggest",
+            title: "Parking Suggest",
+            shortdescription: "Find Nearest Available Parkings and Auto Track Parking Sessions using Internet of Things.",
+            technologies: ["Node.js", "Express", "MongoDB", "Socket.io", "React", "Redux", "RFID Reader", "Arduino", "Raspberry Pi", "Ultrasonic Sensors"],
+            description: `Parking Suggest lets user find nearest parkings to their current location. Ultrasonic sensors connected to Raspberry Pi constantly send availablity status of parking slots to our server deployed on AWS through WebSockets. User can use their Google account to sign in to our app and just with one button our efficient algorithm finds the nearest parking slot to them that has free space. Then Google Maps navigates the user to the parking.`,
+            github: "https://github.com/priyanshrastogi/parking-suggest",
+            live: "https://parking-suggest.netlify.com"
+        },
+        {
             id: "letalent",
             title: "Letalent",
-            shortdescription: "The Talent Marketplace. (On-going)",
-            technologies: ["Node.js", "Express", "MongoDB", "React", "Redux", "Socket.io", "Flask", "Recommendation Systems"],
-            description: `Letalent is a talent marketplace, where people with talent can offer their services to people who want to outsource some work. In other words, it's a freelancing platform for peers. The production build is expected to launch in the last week of April 2018.`,
-            github: "https://github.com/priyanshrastogi/letalent"
+            shortdescription: "The Talent Marketplace, Peer to Peer Freelancing Platform.",
+            technologies: ["Node.js", "Express", "MongoDB", "React", "Redux", "Flask"],
+            description: `Letalent is a talent marketplace, where people with talent can offer their services to people who want to outsource some work. In other words, it's a freelancing platform for peers. The frontend is built with React and Redux, backend with Node.js and Express and data analytics is done with Flask and Pandas.`,
+            github: "https://github.com/priyanshrastogi/letalent",
+            live: "https://letalent.netlify.com"
         },
         {
             id: "thecabpoolapp",
@@ -62,7 +72,7 @@ export default () => {
             title: "MyMusicLib",
             shortdescription: "Multi-user Desktop Music Library App with Built-in Music Player",
             technologies: ["Java", "MySQL"],
-            description: `A Java and MySQL database application where multiple users can create, manage and save their songs, albums etc. It's a mult-uset `,
+            description: `A Java and MySQL database application where multiple users can create, manage and save their songs, albums etc. It has inbuilt music player that lets users play songs.`,
             github: "https://github.com/priyanshrastogi/MyMusicLib"
         }
     ]

@@ -9,11 +9,13 @@ class Projects extends Component {
     renderProjects() {
         return _.map(this.props.projects, project => {
             return (
-                <li className="list-group-item" key={project.id}>
-                    <h5>{project.title}</h5>
-                    <p>{project.shortdescription}</p>
-                    <Link to={`/projects/${project.id}`} className="card-link">See Project</Link>
-                </li>
+                <div className="col-md-4" key={project.id}>
+                    <div className='card text-white bg-dark mb-3' style={{padding: 20, marginBottom: 20}}>
+                        <h5>{project.title}</h5>
+                        <p>{project.shortdescription}</p>
+                        <Link to={`/projects/${project.id}`} className="card-link">View Project</Link>
+                    </div>
+                </div>
             );
         });
     }
@@ -22,10 +24,8 @@ class Projects extends Component {
         return (
             <div className="container text-center">
                 <h4 style={{ fontWeight: 300, marginBottom:'25px', marginTop:'25px' }}>Projects</h4>
-                <div className="card">
-                    <ul className="list-group list-group-flush">
-                        {this.renderProjects()}                        
-                    </ul>
+                <div className="row">
+                        {this.renderProjects()}
                 </div>
             </div>
         );

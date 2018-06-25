@@ -17,7 +17,7 @@ class Project extends Component {
         const { project } = this.props;
 
         if (!project) {
-            return <div className="text-center">Loading...</div>
+            return <div className="text-center"><h4 style={{marginTop: 100}}>Project Not Found</h4></div>
         }
 
         return (
@@ -31,6 +31,12 @@ class Project extends Component {
                 {project.github ? 
                     <div style={{margin: '20px'}}>
                         <a className="card-link" target="_blank" href={project.github}>Github Repository</a>
+                    </div> 
+                    : ''
+                }
+                {project.live ? 
+                    <div style={{margin: '20px'}}>
+                        <a className="card-link" target="_blank" href={project.live}>Live Demo</a>
                     </div> 
                     : ''
                 }
