@@ -1,6 +1,6 @@
 {
   "name": "priyanshrastogi",
-  "version": "2.0.2",
+  "version": "2.1.2",
   "private": false,
   "dependencies": {
     "lodash": "^4.17.5",

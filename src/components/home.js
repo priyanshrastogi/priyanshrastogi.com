@@ -30,28 +30,64 @@ class Home extends Component {
                                     </div>
                                 </div>
                                 <div className="description text-center" style={{color: 'black'}}>
-                                    <p style={{fontWeight: 'normal'}}>Hi, I'm Priyansh. I'm a Full Stack Developer, specialized in JavaScript Stack i.e. Node.js, React, Redux, React Native etc. JavaScript is the first love of my life. I love building things with code and it feels even better when it make lives of people better and easier. I am good in System Design too. My skills also include building scalable apps with clustering, data caching with Redis, database shrading and scalable deployment to AWS.</p>
+                                    <p style={{fontWeight: 'normal'}}>Hi, I'm Priyansh. I'm a Full Stack Developer, specialized in JavaScript Stack i.e. Node.js, React, Redux, React Native etc. JavaScript is the first love of my life. I love building things with code and it feels even better when it make lives of people better and easier. My skills include designing and building real-time, scalable applications and deployment over the cloud.</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-6 ml-auto mr-auto">
                                         <div className="profile-tabs">
                                             <ul className="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                                                 <li className="nav-item">
-                                                    <a className="nav-link active" href="#profile" role="tab" data-toggle="tab">
-                                                        <i className="fa fa-terminal"></i> Skills
-                                                </a>
+                                                    <a className="nav-link active" href="#work" role="tab" data-toggle="tab">
+                                                        <i className="fa fa-terminal"></i> Work
+                                                    </a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="nav-link" href="#work" role="tab" data-toggle="tab">
-                                                        <i className="fa fa-code"></i> Projects
-                                                </a>
+                                                    <a className="nav-link" href="#profile" role="tab" data-toggle="tab">
+                                                        <i className="fa fa-code"></i> Skills
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-content tab-space">
-                                    <div className="tab-pane active" id="profile">
+                                    <div className="tab-pane active" id="work">
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                                <div className="card card-nav-tabs">
+                                                    <h4 className="card-header card-header-primary text-center">Experience</h4>
+                                                    <div className="card-body">
+                                                        <p style={{fontWeight: 'normal'}}><a style={{ fontWeight: 'bold', color: 'black' }} href="https://americanexpress.io">American Express</a>
+                                                        <br/>
+                                                        Software Development Engineer Intern
+                                                        <br/>
+                                                        Jan 2019 - Present
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-6">
+                                                <div className="card card-nav-tabs">
+                                                    <h4 className="card-header card-header-info text-center">Showcase</h4>
+                                                    <ul className="list-group list-group-flush">
+                                                        <li className="list-group-item">
+                                                            <p style={{fontWeight: 'normal', color: 'black'}}><Link to="/projects/parking-suggest" style={{color: 'black'}}>Parking Suggest</Link></p>
+                                                        </li>
+                                                        <li className="list-group-item">
+                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/letalent" style={{color: 'black'}}>Letalent</Link></p>
+                                                        </li>
+                                                        <li className="list-group-item">
+                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/handy6" style={{color: 'black'}}>HANDY 6</Link></p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="text-center">
+                                            <Link className="text-center btn btn-success" to="/projects" style={{fontWeight: 'normal', marginTop: 20}}>View All Projects</Link>
+                                        </div>
+                                    </div>
+                                    <div className="tab-pane" id="profile">
                                         <div className="row">
                                             <div className="col-md-4">
                                                 <div className="card card-nav-tabs">
@@ -77,45 +113,6 @@ class Home extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div className="tab-pane" id="work">
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <div className="card card-nav-tabs">
-                                                    <h4 className="card-header card-header-info text-center">Showcase</h4>
-                                                    <ul className="list-group list-group-flush">
-                                                        <li className="list-group-item">
-                                                            <p style={{fontWeight: 'normal', color: 'black'}}><Link to="/projects/parking-suggest" style={{color: 'black'}}>Parking Suggest</Link></p>
-                                                        </li>
-                                                        <li className="list-group-item">
-                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/letalent" style={{color: 'black'}}>Letalent</Link></p>
-                                                        </li>
-                                                        <li className="list-group-item">
-                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/handy6" style={{color: 'black'}}>HANDY 6</Link></p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <div className="card card-nav-tabs">
-                                                    <h4 className="card-header card-header-primary text-center">Tiny Yet Powerful</h4>
-                                                    <ul className="list-group list-group-flush">
-                                                        <li className="list-group-item">
-                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/twitter-sentiment-analyser" style={{color: 'black'}}>Twitter Sentiment Analyser</Link></p>
-                                                        </li>
-                                                        <li className="list-group-item">
-                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/order-delivery-forecast" style={{color: 'black'}}>eStore with Order Delivery Forecast</Link></p>
-                                                        </li>
-                                                        <li className="list-group-item">
-                                                            <p style={{fontWeight: 'normal'}}><Link to="/projects/world-climate-change" style={{color: 'black'}}>World Climate Change Data Analytics</Link></p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="text-center">
-                                            <Link className="text-center btn btn-success" to="/projects" style={{fontWeight: 'normal', marginTop: 20}}>View All Projects</Link>
                                         </div>
                                     </div>
                                 </div>
