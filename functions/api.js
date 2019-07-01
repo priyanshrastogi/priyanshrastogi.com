@@ -2,6 +2,7 @@ const express = require('express');
 const awsServerlessExpress = require('aws-serverless-express');
 const morgan = require('morgan');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
+const cors = require('cors');
 const database = require('./services/database');
 const medium = require('./services/medium');
 
@@ -11,6 +12,7 @@ const basePath = `/.netlify/functions/${functionName}/`;
 const app = express(functionName);
 const router = express.Router();
 
+app.use(cors({origin: 'http://localhost:3000'}))
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,7 +35,7 @@ app.use(basePath, router);
 
 router.use(awsServerlessExpressMiddleware.eventContext());
 
-if(process.env.RUN_ON_LOCAL == 1) {
+if(process.env.REACT_APP_RUN_ON_LOCAL === '1') {
   app.listen(9000, () => {
     console.log('priyanshrastogi.com Serverless API listening on port 9000');
   });

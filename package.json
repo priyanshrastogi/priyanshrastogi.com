@@ -6,6 +6,7 @@
     "aws-serverless-express": "^3.3.6",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
     "prop-types": "^15.7.2",
@@ -18,7 +19,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "cross-env RUN_ON_LOCAL=1 npm-run-all --parallel start:**",
+    "start": "cross-env REACT_APP_RUN_ON_LOCAL=1 npm-run-all --parallel start:**",
     "start:app": "react-scripts start",
     "start:functions": "cross-env RUN_ON_LOCAL=1 node functions/api",
     "build": "npm-run-all --parallel build:**",

@@ -2,7 +2,13 @@ import axios from 'axios';
 
 export const GET_BLOG_POSTS = 'get_blog_posts';
 
-const API_ROOT_URL = '/.netlify/functions/api';
+let API_ROOT_URL;
+if(process.env.REACT_APP_RUN_ON_LOCAL === '1') {
+  API_ROOT_URL = 'http://localhost:9000/.netlify/functions/api';
+}
+else {
+  API_ROOT_URL = '/.netlify/functions/api';
+}
 
 export const getBlogPosts = () => async dispatch => {
   try {

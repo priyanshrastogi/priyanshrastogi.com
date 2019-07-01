@@ -15,7 +15,7 @@ class BlogPosts extends Component {
       console.log(post.title)
       return (
         <div key={post.guid}>
-          <p>{post.title}</p>
+          <p><a target='_blank' href={post.link} style={{color: 'inherit'}}>{post.title}</a></p>
         </div>
       )
     })
