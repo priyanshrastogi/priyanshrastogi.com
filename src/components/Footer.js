@@ -1,12 +1,9 @@
 import React from 'react';
 
-export default function Home() {
+export default function Footer() {
   return (
-    <div>
-      <div className='footer text-center'>
-        <p>Version 3.0.1<br/>Copyright 2019 Priyansh Rastogi under The MIT License.</p>
-      </div>
-      
+    <div className='footer text-center'>
+      <p>Version 3.0.1<br/>&copy; Copyright {new Date().getFullYear()} Priyansh Rastogi under The MIT License.</p>
     </div>
   )
 }

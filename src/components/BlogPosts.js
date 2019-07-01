@@ -12,7 +12,6 @@ class BlogPosts extends Component {
 
   renderList = () => {
     return this.props.posts.map((post) => {
-      console.log(post.title)
       return (
         <div key={post.guid}>
           <p><a target='_blank' href={post.link} style={{color: 'inherit'}}>{post.title}</a></p>
@@ -24,14 +23,16 @@ class BlogPosts extends Component {
   render() {
     if(this.props.posts.length === 0) {
       return (
-        <div>
+        <div className='blogposts'>
+          <h2># blog posts</h2>
           <p>Fetching posts for you...</p>
         </div>
       )
     }
     else {
       return (
-        <div>
+        <div className='blogposts'>
+          <h2># blog posts</h2>
           {this.renderList()}
         </div>
       )

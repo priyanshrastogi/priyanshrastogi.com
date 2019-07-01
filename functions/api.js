@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
 const cors = require('cors');
 const database = require('./services/database');
-const medium = require('./services/medium');
+const web = require('./services/web');
 
 const functionName = 'api';
 const basePath = `/.netlify/functions/${functionName}/`;
@@ -23,7 +23,17 @@ router.get('/', (req, res) => {
 
 router.get('/blog/posts', async (req, res, next) => {
   try {
-    const posts = await medium.getBlogPosts();
+    const posts = await web.getBlogPosts();
+    res.json(posts);
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.get('/github/repos', async (req, res, next) => {
+  try {
+    const posts = await web.getGithubRepos();
     res.json(posts);
   }
   catch(err) {

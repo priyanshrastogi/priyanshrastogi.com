@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);

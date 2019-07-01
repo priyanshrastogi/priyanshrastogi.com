@@ -12,4 +12,18 @@ exports.getBlogPosts = () => new Promise(async (resolve, reject) => {
   catch(err) {
     reject(err);
   }
-})
+});
+
+exports.getGithubRepos = () => new Promise(async (resolve, reject) => {
+  try {
+    const { data } = await axios.get('https://api.github.com/users/priyanshrastogi/repos?sort=pushed');
+    const res = [];
+    for(let i=0; i<Math.min(data.length, 10); i++) {
+      res.push({fullName: data[i].full_name, url: data[i].html_url, id: data[i].id});
+    }
+    resolve(res);
+  }
+  catch(err) {
+    reject(err);
+  }
+});
