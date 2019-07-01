@@ -2,7 +2,6 @@ const express = require('express');
 const awsServerlessExpress = require('aws-serverless-express');
 const morgan = require('morgan');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
-const cors = require('cors');
 const database = require('./services/database');
 const medium = require('./services/medium');
 
@@ -12,7 +11,6 @@ const basePath = `/.netlify/functions/${functionName}/`;
 const app = express(functionName);
 const router = express.Router();
 
-app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
