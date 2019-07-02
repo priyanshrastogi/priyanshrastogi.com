@@ -5,6 +5,8 @@ import Work from '../components/Work';
 import BlogPosts from '../components/BlogPosts';
 import GithubRepos from '../components/GithubRepos';
 import Tweets from '../components/Tweets';
+import Connect from '../components/Connect';
+import Links from '../components/Links';
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Work/>
       <BlogPosts/>
       <GithubRepos/>
+      <Connect/>
+      <Links/>
       <Tweets/>
     </div>
   )

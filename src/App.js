@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
 import Home from './pages/Home';
+import Page404 from './pages/Page404';
 import Footer from './components/Footer';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
@@ -16,10 +17,7 @@ function App() {
         <div>
             <Switch>
                 <Route exact path="/" component={Home} />
-                {/*<Route exact path="/projects" component={Projects} />
-                <Route exact path="/projects/:id" component={Project} />
-                <Route exact path="/bookshelf" component={BookShelf} />
-                <Route component={Page404} />*/}
+                <Route component={Page404} />
             </Switch>
             <Footer />
         </div>

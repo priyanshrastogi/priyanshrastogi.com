@@ -24,16 +24,20 @@ class BlogPosts extends Component {
     if(this.props.posts.length === 0) {
       return (
         <div className='blogposts'>
-          <h2># blog posts</h2>
-          <p>Fetching posts for you...</p>
+          <h2><span className='topic-highlight'># blog posts</span></h2>
+          <div className='content'>
+            <p>Fetching posts for you...</p>
+          </div>
         </div>
       )
     }
     else {
       return (
         <div className='blogposts'>
-          <h2># blog posts</h2>
-          {this.renderList()}
+         <h2><span className='topic-highlight'># blog posts</span></h2>
+          <div className='content'>
+            {this.renderList()}
+          </div>
         </div>
       )
     }
