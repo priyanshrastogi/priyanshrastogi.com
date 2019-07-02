@@ -23,7 +23,7 @@ class BlogPosts extends Component {
   render() {
     if(this.props.posts.length === 0) {
       return (
-        <div className='blogposts'>
+        <div className='section'>
           <h2><span className='topic-highlight'># blog posts</span></h2>
           <div className='content'>
             <p>Fetching posts for you...</p>
@@ -33,7 +33,7 @@ class BlogPosts extends Component {
     }
     else {
       return (
-        <div className='blogposts'>
+        <div className='section'>
          <h2><span className='topic-highlight'># blog posts</span></h2>
           <div className='content'>
             {this.renderList()}

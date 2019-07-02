@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Work(){
   return (
-    <div className='work'>
+    <div className='section'>
       <h2><span className='topic-highlight'># work</span></h2>
       <div className='content'>
         <p>Software Engineer / American Express<br/>Jul 2019 - Present</p>

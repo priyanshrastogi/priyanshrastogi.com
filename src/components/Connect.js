@@ -5,10 +5,10 @@ import { faLinkedinIn, faInstagram, faGithub, faTwitter, faFacebook, faMedium } 
 export default function Connect() {
   const iconStyle = {marginLeft: 15, marginRight: 15, color: '#3366FF'};
   return (
-    <div className='about'>
+    <div className='section'>
       <h2><span className='topic-highlight'># connect with me</span></h2>
       <div className='content'>
-        <p>If you want to build something together, or wanna get in touch, write to <a href='mailto:hello@priyanshrastogi.com' style={{color: '#3366FF'}}>hello@priyanshrastogi.com</a><br/>Or for some chit-chat, use these links: </p>
+        <p>If you want to build something together, or wanna get in touch, write to <a href='mailto:hello@priyanshrastogi.com' style={{color: '#3366FF'}}>hello@priyanshrastogi.com</a><br/>I am social, find me on </p>
         <div className='text-center'>
           <a target='_blank' href='https://linkedin.com/in/priyanshrastogi' style={iconStyle}><FontAwesomeIcon icon={faLinkedinIn} size='lg'/></a>
           <a target='_blank' href='https://twitter.com/priyanshx7' style={iconStyle}><FontAwesomeIcon icon={faTwitter} size='lg'/></a>

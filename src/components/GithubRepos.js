@@ -23,7 +23,7 @@ class GithubRepos extends Component {
   render() {
     if(this.props.repos.length === 0) {
       return (
-        <div className='blogposts'>
+        <div className='section'>
           <h2><span className='topic-highlight'># github repos</span></h2>
           <div className='content'>
             <p>Fetching repos for you...</p>
@@ -33,7 +33,7 @@ class GithubRepos extends Component {
     }
     else {
       return (
-        <div className='blogposts'>
+        <div className='section'>
           <h2><span className='topic-highlight'># github repos</span></h2>
           <div className='content'>
             {this.renderList()}
