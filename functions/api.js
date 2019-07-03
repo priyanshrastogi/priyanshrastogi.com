@@ -73,8 +73,8 @@ router.get('/code/notes/:link', async (req, res, next) => {
 
 router.post('/subscribe', async (req, res, next) => {
   try {
-    const subscriber = await database.insertIntoSubscribers(req.body.email);
-    res.json(subscriber);
+    const result = await database.insertIntoSubscribers(req.body.email);
+    res.json(result);
   }
   catch(err) {
     next(err);

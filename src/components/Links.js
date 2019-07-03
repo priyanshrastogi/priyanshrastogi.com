@@ -6,9 +6,9 @@ export default function Links() {
     <div className='section'>
       <h2><span className='topic-highlight'># links</span></h2>
       <div className='content'>
-        <p><Link to='projects' style={{color: 'inherit'}}>Projects</Link></p>
-        <p>About this website tech stack</p>
-        <p>Blog - Searching for X</p>
+        <p><Link to='/codenotes' style={{color: 'inherit'}}>Code Notes</Link></p>
+        <p><Link to='/projects' style={{color: 'inherit'}}>Projects</Link></p>
+        <p><a target='_blank' rel='noopener noreferrer' href='https://blog.priyanshrastogi.com' style={{color: 'inherit'}}>Blog</a></p>
       </div>
     </div>
   )

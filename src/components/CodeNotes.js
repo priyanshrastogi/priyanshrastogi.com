@@ -58,7 +58,6 @@ class CodeNotes extends Component {
 
 CodeNotes.propTypes = {
   showGotoPageButton: PropTypes.bool
-
 }
 
 CodeNotes.defaultProps = {

@@ -15,8 +15,14 @@ exports.insertIntoSubscribers = (email) => new Promise(async (resolve, reject) =
     else {
       subscribers =  db.collection('subscribers');
     }
-    const inserted = await subscribers.insertOne({email, subscribedOn: new Date(), active: true});
-    resolve(inserted.ops[0]);
+    const existing = await subscribers.findOne({email})
+    if(existing) {
+      resolve({false: true, message: 'This email is already subscribed'});
+    }
+    else {
+      const inserted = await subscribers.insertOne({email, subscribedOn: new Date()});
+      resolve({success: true, message: 'Subscription successful'});
+    }
   }
   catch(err) {
     console.log(err);
