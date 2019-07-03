@@ -14,7 +14,7 @@ class GithubRepos extends Component {
     return this.props.repos.map((repo) => {
       return (
         <div key={repo.id}>
-          <p><a target='_blank' href={repo.url} style={{color: 'inherit'}}>{repo.fullName}</a></p>
+          <p><a target='_blank' rel='noopener noreferrer' href={repo.url} style={{color: 'inherit'}}>{repo.fullName}</a></p>
         </div>
       )
     })

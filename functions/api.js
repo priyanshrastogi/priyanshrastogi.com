@@ -41,6 +41,46 @@ router.get('/github/repos', async (req, res, next) => {
   }
 });
 
+router.get('/code/notes', async (req, res, next) => {
+  try {
+    const notes = await database.getCodeNotes();
+    res.json(notes);
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.post('/code/notes', async (req, res, next) => {
+  try {
+    const note = await database.insertIntoCodeNotes(req.body);
+    res.json(note);
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.get('/code/notes/:link', async (req, res, next) => {
+  try {
+    const note = await database.getCodeNoteByLink(req.params.link);
+    res.json(note);
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.post('/subscribe', async (req, res, next) => {
+  try {
+    const subscriber = await database.insertIntoSubscribers(req.body.email);
+    res.json(subscriber);
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
 app.use(basePath, router);
 
 router.use(awsServerlessExpressMiddleware.eventContext());
@@ -56,5 +96,6 @@ const server = awsServerlessExpress.createServer(app);
 
 // Export lambda handler
 exports.handler = (event, context) => {
+  context.callbackWaitsForEmptyEventLoop = false;
   return awsServerlessExpress.proxy(server, event, context)
 }

@@ -7,6 +7,8 @@ import reducers from './reducers';
 import Home from './pages/Home';
 import Page404 from './pages/Page404';
 import Footer from './components/Footer';
+import CodeNotesPage from './pages/CodeNotes';
+import CodeNotesDetailPage from './pages/CodeNoteDetail';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
@@ -16,7 +18,9 @@ function App() {
       <BrowserRouter>
         <div>
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path='/' component={Home} />
+                <Route exact path='/codenotes' component={CodeNotesPage}/>
+                <Route exact path='/codenotes/:link' component={CodeNotesDetailPage}/>
                 <Route component={Page404} />
             </Switch>
             <Footer />

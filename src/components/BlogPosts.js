@@ -14,7 +14,7 @@ class BlogPosts extends Component {
     return this.props.posts.map((post) => {
       return (
         <div key={post.guid}>
-          <p><a target='_blank' href={post.link} style={{color: 'inherit'}}>{post.title}</a></p>
+          <p><a target='_blank' rel='noopener noreferrer' href={post.link} style={{color: 'inherit'}}>{post.title}</a></p>
         </div>
       )
     })
