@@ -8,7 +8,7 @@ export default function CodeNotesDetailPage(props) {
     <div className='container'>
       <Header/>
       <CodeNoteDetail match={props.match}/>
-      <div style={{marginTop: 50}}>
+      <div style={{marginTop: 50, marginBottom: 100}}>
         <div>
           <Link to={'/codenotes'} style={{color: 'inherit'}}>Back to Code Notes</Link>
         </div>

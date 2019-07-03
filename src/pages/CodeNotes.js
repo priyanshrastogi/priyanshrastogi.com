@@ -7,14 +7,12 @@ export default function CodeNotesPage() {
   return (
     <div className='container'>
       <Header/>
-      <div style={{marginBottom: 100}}>
-        <CodeNotes showHeader={false} showGotoPageButton={false}/>
-        <div style={{marginTop: 50}}>
+      <CodeNotes showHeader={false} showGotoPageButton={false}/>
+        <div style={{marginTop: 50, marginBottom: 100}}>
           <div>
             <Link to={'/'} style={{color: 'inherit'}}>Back to Homepage</Link>
           </div>
         </div>
-      </div>
     </div>
   )
 }
