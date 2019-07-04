@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
-import CreateCodeNote from '../components/CreateCodeNote';
+import CreateOrUpdateCodeNote from '../components/CreateOrUpdateCodeNote';
 
-export default function CreateCodeNotePage(props) {
+export default function CreateCodeNote(props) {
   return (
-    <div className='container'>
-      <Header name='# code notes'/>
-      <CreateCodeNote history={props.history}/>
+    <div>
+      <CreateOrUpdateCodeNote history={props.history}/>
     </div>
-  )
+  );
 }

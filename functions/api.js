@@ -5,6 +5,7 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const cors = require('cors');
 const database = require('./services/database');
 const web = require('./services/web');
+const mailer = require('./services/mailer');
 
 const functionName = 'api';
 const basePath = `/.netlify/functions/${functionName}/`;
@@ -85,6 +86,26 @@ router.post('/subscribe', async (req, res, next) => {
     next(err);
   }
 });
+
+router.get('/subscribers', async (req, res, next) => {
+  if(req.headers.authorization === process.env.ADMIN_KEY) {
+    const subscribers = await database.getSubscribers();
+    res.json(subscribers);
+  }
+  else {
+    res.status(401).send('Unauthorized');
+  }
+});
+
+router.post('/sendmail', async (req, res, next) => {
+  if(req.headers.authorization === process.env.ADMIN_KEY) {
+    const result = await mailer.sendMail(req.body);
+    res.json(result);
+  }
+  else {
+    res.status(401).send('Unauthorized');
+  }
+})
 
 app.use(basePath, router);
 

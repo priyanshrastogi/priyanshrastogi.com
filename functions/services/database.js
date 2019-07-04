@@ -30,6 +30,26 @@ exports.insertIntoSubscribers = (email) => new Promise(async (resolve, reject) =
   }
 });
 
+exports.getSubscribers = () => new Promise(async (resolve, reject) => {
+  let subscribers;
+  try {
+    if(db === null) {
+      const conn = await mongoClient.connect(url, { useNewUrlParser: true });
+      db = conn.db('priyanshrastogidotcom');
+      subscribers = db.collection('subscribers');
+    }
+    else {
+      subscribers = db.collection('subscribers');
+    }
+    const result = await subscribers.find({});
+    resolve(await result.toArray());
+  }
+  catch(err) {
+    console.log(err);
+    reject(err)
+  }
+});
+
 exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
   let notes;
   try {

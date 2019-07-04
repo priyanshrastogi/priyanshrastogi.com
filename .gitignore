@@ -14,6 +14,7 @@
 secrets.txt
 
 # misc
+/posts
 .DS_Store
 .env.local
 .env.development.local

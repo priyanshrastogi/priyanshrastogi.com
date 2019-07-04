@@ -63,8 +63,8 @@ export default function Subscribe() {
             value='Subscribe' 
             style={{backgroundColor: '#3366FF', borderColor: '#3366FF', color: 'white', boxShadow: '5px 5px #888888'}}
           />
+          {error ? <p className='text-danger'>Email is not valid</p> : <p></p>}
         </form>
-        {error ? <p className='text-danger'>Email is not valid</p> : null}
       </div>
     </div>
   )
