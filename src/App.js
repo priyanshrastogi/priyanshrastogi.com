@@ -9,6 +9,7 @@ import Page404 from './pages/Page404';
 import Footer from './components/Footer';
 import CodeNotesPage from './pages/CodeNotes';
 import CodeNotesDetailPage from './pages/CodeNoteDetail';
+import CreateCodeNotePage from './pages/CreateCodeNote';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
@@ -20,6 +21,7 @@ function App() {
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/codenotes' component={CodeNotesPage}/>
+                <Route exact path='/codenotes/create' component={CreateCodeNotePage}/>
                 <Route exact path='/codenotes/:link' component={CodeNotesDetailPage}/>
                 <Route component={Page404} />
             </Switch>

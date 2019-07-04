@@ -7,7 +7,7 @@ import Subscribe from '../components/Subscribe';
 export default function CodeNotesDetailPage(props) {
   return (
     <div className='container'>
-      <Header/>
+      <Header name='# code notes'/>
       <CodeNoteDetail match={props.match}/>
       <Subscribe/>
       <div style={{marginTop: 50, marginBottom: 100}}>

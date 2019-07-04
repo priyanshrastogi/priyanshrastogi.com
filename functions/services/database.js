@@ -61,6 +61,7 @@ exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
     else {
       notes = db.collection('notes');
     }
+    note['createdOn'] = new Date();
     const inserted = await notes.insertOne(note);
     resolve(inserted.ops[0]);
   }

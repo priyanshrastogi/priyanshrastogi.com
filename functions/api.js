@@ -53,8 +53,13 @@ router.get('/code/notes', async (req, res, next) => {
 
 router.post('/code/notes', async (req, res, next) => {
   try {
-    const note = await database.insertIntoCodeNotes(req.body);
-    res.json(note);
+    if(req.headers.authorization === process.env.ADMIN_KEY) {
+      const note = await database.insertIntoCodeNotes(req.body);
+      res.json(note);
+    }
+    else {
+      res.status(401).send('Unauthorized');
+    }
   }
   catch(err) {
     next(err);

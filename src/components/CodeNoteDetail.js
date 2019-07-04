@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Highlight from 'react-highlight';
 import { connect } from 'react-redux';
+import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock';
 import { getCodeNote } from '../actions';
 
 class CodeNoteDetail extends Component {
@@ -13,15 +14,19 @@ class CodeNoteDetail extends Component {
 
   render() {
     const { note } = this.props;
+    console.log(note ? note.markdown: null);
     if(note) {
       return (
         <div className='section' style={{marginBottom: 100}}>
-          <div className='text-center'>
-            <h5>{note.title}</h5>
-          </div>
           <div>
-            <Highlight className={note.lang}>{note.code}</Highlight>
-          </div> 
+            <ReactMarkdown
+              source={note.markdown}
+              escapeHtml={false}
+              renderers={{
+                code: CodeBlock
+              }}
+            />
+          </div>
         </div>
       );
     }
