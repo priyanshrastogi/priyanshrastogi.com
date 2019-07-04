@@ -1,9 +1,6 @@
-* {
-  font-family: 'Space Mono', monospace;
-}
-
 body {
-  background-color: #F2F3F4
+  background-color: #F2F3F4;
+  font-family: 'Space Mono', monospace;
 }
 
 a {
