@@ -1,23 +1,43 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { postCodeNote } from '../actions';
+import { saveDraft } from '../services'; 
 import CodeBlock from '../components/CodeBlock';
 import Header from '../components/Header';
 
 function CreateOrUpdateCodeNote(props) {
   
-  const [title, setTitle] = useState('');
-  const [link, setLink] = useState('');
-  const [markdown, setMarkdown] = useState('');
+  const [id, setId] = useState(props.note ? props.note._id : '');
+  const [title, setTitle] = useState(props.note ?  props.note.title: '');
+  const [link, setLink] = useState(props.note ? props.note.link : '');
+  const [markdown, setMarkdown] = useState(props.note ? props.note.markdown : '');
   const [key, setKey] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const _publishNote = (e) => {
     e.preventDefault();
     props.postCodeNote({title, link, markdown}, key, () => {
       props.history.push('/codenotes');
     });
+  }
+
+  const _saveDraft = async (e) => {
+    e.preventDefault();
+    try {
+      const note = await saveDraft(id, {title, link, markdown}, key);
+      setId(note._id);
+      setMessage(`Draft saved on ${new Date().toString()}`)
+    }
+    catch(err) {
+      console.log(err);
+    }
+  }
+
+  const _updateNote = (e) => {
+    e.preventDefault();
   }
 
   return (
@@ -25,20 +45,23 @@ function CreateOrUpdateCodeNote(props) {
       <div className='content col-md-6'>
       <Header name='# code notes'/>
       <h5 style={{textAlign: 'center', marginBottom: 20, marginTop: 30}}>Create A Code Note.</h5>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input 
             type='text'
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder='Title of Code Note'
             style={{width: '100%', marginBottom: 20, height: 40}}
           />
           <input 
             type='text'
+            value={link}
             onChange={(e) => setLink(e.target.value)}
             placeholder='Unique Link of Code Note'
             style={{width: '100%', marginBottom: 20, height: 40}}
           />
           ​<textarea
+            value={markdown}
             rows={20}
             onChange={(e) => setMarkdown(e.target.value)}
             style={{width: '100%', marginBottom: 15}}
@@ -53,19 +76,22 @@ function CreateOrUpdateCodeNote(props) {
           {props.isPublished ?
           <div className='text-center'>
             <input
+              onClick={_updateNote}
               type='submit' 
-              value='Update' 
+              value='Update Note' 
               style={{backgroundColor: '#3366FF', borderColor: '#3366FF', color: 'white', boxShadow: '5px 5px #888888', height: 40, paddingLeft: 30, paddingRight: 30, marginLeft: 20, marginRight: 20}}
             />
           </div>
           :
           <div className='text-center'>
             <input
+              onClick={_publishNote}
               type='submit' 
               value='Publish' 
               style={{backgroundColor: '#3366FF', borderColor: '#3366FF', color: 'white', boxShadow: '5px 5px #888888', height: 40, paddingLeft: 30, paddingRight: 30, marginLeft: 20, marginRight: 20}}
             />
             <input
+              onClick={_saveDraft}
               type='submit' 
               value='Save Draft' 
               style={{backgroundColor: '#3366FF', borderColor: '#3366FF', color: 'white', boxShadow: '5px 5px #888888', height: 40, paddingLeft: 30, paddingRight: 30}}
@@ -73,6 +99,7 @@ function CreateOrUpdateCodeNote(props) {
           </div>
           }
         </form>
+        {<p className='text-success' style={{marginTop: 5}}>{message}</p>}
       </div>
       <div className='content col-md-6 scroll' style={{maxHeight: '100vh', overflow: 'scroll'}}>
         <p>Markdown Preview</p>
@@ -89,7 +116,6 @@ function CreateOrUpdateCodeNote(props) {
 }
 
 CreateOrUpdateCodeNote.propTypes = {
-  history: PropTypes.object.isRequired,
   isPublished: PropTypes.bool
 }
 
@@ -97,4 +123,4 @@ CreateOrUpdateCodeNote.defaultProps = {
   isPublished: false
 }
 
-export default connect(null, { postCodeNote })(CreateOrUpdateCodeNote);
+export default withRouter(connect(null, { postCodeNote })(CreateOrUpdateCodeNote));

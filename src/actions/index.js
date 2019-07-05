@@ -4,6 +4,7 @@ export const GET_BLOG_POSTS = 'get_blog_posts';
 export const GET_GITHUB_REPOS = 'get_github_repos';
 export const GET_CODE_NOTES = 'get_code_notes';
 export const GET_CODE_NOTE = 'get_code_note';
+export const GET_CODE_NOTES_DRAFTS = 'get_code_notes_drafts';
 
 let API_ROOT_URL;
 if(process.env.REACT_APP_RUN_ON_LOCAL === '1') {
@@ -15,7 +16,7 @@ else {
 
 export const getBlogPosts = () => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/blog/posts`);
+    const res = await axios.get(`${API_ROOT_URL}/blogposts`);
     dispatch({type: GET_BLOG_POSTS, payload: res.data.items}); 
   }
   catch(err) {
@@ -25,7 +26,7 @@ export const getBlogPosts = () => async dispatch => {
 
 export const getGithubRepos = () => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/github/repos`);
+    const res = await axios.get(`${API_ROOT_URL}/githubrepos`);
     dispatch({type: GET_GITHUB_REPOS, payload: res.data});
   }
   catch(err) {
@@ -35,7 +36,7 @@ export const getGithubRepos = () => async dispatch => {
 
 export const getCodeNotes = () => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/code/notes`);
+    const res = await axios.get(`${API_ROOT_URL}/codenotes`);
     dispatch({type: GET_CODE_NOTES, payload: res.data}); 
   }
   catch(err) {
@@ -45,7 +46,7 @@ export const getCodeNotes = () => async dispatch => {
 
 export const getCodeNote = (link) => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/code/notes/${link}`);
+    const res = await axios.get(`${API_ROOT_URL}/codenotes/${link}`);
     dispatch({type: GET_CODE_NOTE, payload: res.data}); 
   }
   catch(err) {
@@ -55,11 +56,21 @@ export const getCodeNote = (link) => async dispatch => {
 
 export const postCodeNote = (note, key, callback) => async dispatch => {
   try {
-    const res = await axios.post(`${API_ROOT_URL}/code/notes`, note, {
+    const res = await axios.post(`${API_ROOT_URL}/codenotes`, note, {
       headers: {'Authorization': key}
     });
     dispatch({type: GET_CODE_NOTE, payload: res.data});
     callback();  
+  }
+  catch(err) {
+    console.log(err);
+  }
+}
+
+export const getCodeNotesDrafts = () => async dispatch => {
+  try {
+    const res = await axios.get(`${API_ROOT_URL}/codenotes/drafts`);
+    dispatch({type: GET_CODE_NOTES_DRAFTS, payload: res.data}); 
   }
   catch(err) {
     console.log(err);

@@ -17,3 +17,23 @@ export const subscribeUser = (email) => new Promise(async (resolve, reject) => {
     reject(err);
   }
 });
+
+export const saveDraft = (id, note, key) => new Promise(async (resolve, reject) => {
+  try {
+    if(id === '') {
+      const { data } = await axios.post(`${API_ROOT_URL}/codenotes/drafts`, note, {
+        headers: {'Authorization': key}
+      });
+      resolve(data);
+    }
+    else {
+      const { data } = await axios.put(`${API_ROOT_URL}/codenotes/drafts/${id}`, note, {
+        headers: {'Authorization': key}
+      });
+      resolve(data);
+    }
+  }
+  catch(err) {
+    reject(err);
+  }
+});

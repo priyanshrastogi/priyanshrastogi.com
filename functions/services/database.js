@@ -91,6 +91,26 @@ exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
   }
 });
 
+exports.updateCodeNote = (id, note) => new Promise(async (resolve, reject) => {
+  let notes;
+  try {
+    if(db === null) {
+      const conn = await mongoClient.connect(url, { useNewUrlParser: true });
+      db = conn.db('priyanshrastogidotcom');
+      notes = db.collection('notes');
+    }
+    else {
+      notes = db.collection('notes');
+    }
+    const result = await notes.findOneAndUpdate({_id: mongodb.ObjectID(id)}, {$set: note}, { returnOriginal: false });
+    resolve(await result.value);
+  }
+  catch(err) {
+    console.log(err);
+    reject(err)
+  }
+});
+
 exports.getCodeNotes = () => new Promise(async (resolve, reject) => {
   let notes;
   try {
@@ -124,6 +144,67 @@ exports.getCodeNoteByLink = (link) => new Promise(async (resolve, reject) => {
     }
     const result = await notes.findOne({link});
     resolve(result);
+  }
+  catch(err) {
+    console.log(err);
+    reject(err)
+  }
+});
+
+exports.insertIntoCodeNotesDrafts = (note) => new Promise(async (resolve, reject) => {
+  let drafts;
+  try {
+    if(db === null) {
+      const conn = await mongoClient.connect(url, { useNewUrlParser: true });
+      db = conn.db('priyanshrastogidotcom');
+      drafts = db.collection('notes_drafts');
+    }
+    else {
+      drafts = db.collection('notes_drafts');
+    }
+    note['createdOn'] = new Date();
+    const inserted = await drafts.insertOne(note);
+    resolve(inserted.ops[0]);
+  }
+  catch(err) {
+    console.log(err);
+    reject(err)
+  }
+});
+
+exports.updateCodeNotesDraft = (id, note) => new Promise(async (resolve, reject) => {
+  let drafts;
+  try {
+    if(db === null) {
+      const conn = await mongoClient.connect(url, { useNewUrlParser: true });
+      db = conn.db('priyanshrastogidotcom');
+      drafts = db.collection('notes_drafts');
+    }
+    else {
+      drafts = db.collection('notes_drafts');
+    }
+    const result = await drafts.findOneAndUpdate({_id: mongodb.ObjectID(id)}, {$set: note}, { returnOriginal: false });
+    resolve(await result.value);
+  }
+  catch(err) {
+    console.log(err);
+    reject(err)
+  }
+});
+
+exports.getCodeNotesDrafts = () => new Promise(async (resolve, reject) => {
+  let drafts;
+  try {
+    if(db === null) {
+      const conn = await mongoClient.connect(url, { useNewUrlParser: true });
+      db = conn.db('priyanshrastogidotcom');
+      drafts = db.collection('notes_drafts');
+    }
+    else {
+      drafts = db.collection('notes_drafts');
+    }
+    const result = await drafts.find({});
+    resolve(await result.toArray());
   }
   catch(err) {
     console.log(err);

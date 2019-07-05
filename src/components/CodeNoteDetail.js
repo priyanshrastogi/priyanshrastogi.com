@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
+import moment from 'moment';
 import CodeBlock from './CodeBlock';
 import { getCodeNote } from '../actions';
 
@@ -19,6 +20,7 @@ class CodeNoteDetail extends Component {
       return (
         <div className='section' style={{marginBottom: 100}}>
           <div>
+            <p>Published {moment(note.createdOn).fromNow()}</p>
             <ReactMarkdown
               source={note.markdown}
               escapeHtml={false}

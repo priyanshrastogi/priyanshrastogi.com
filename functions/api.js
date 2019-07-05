@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
   res.send('priyanshrastogi.com Serverless API.')
 });
 
-router.get('/blog/posts', async (req, res, next) => {
+router.get('/blogposts', async (req, res, next) => {
   try {
     const posts = await web.getBlogPosts();
     res.json(posts);
@@ -32,7 +32,7 @@ router.get('/blog/posts', async (req, res, next) => {
   }
 });
 
-router.get('/github/repos', async (req, res, next) => {
+router.get('/githubrepos', async (req, res, next) => {
   try {
     const posts = await web.getGithubRepos();
     res.json(posts);
@@ -42,7 +42,7 @@ router.get('/github/repos', async (req, res, next) => {
   }
 });
 
-router.get('/code/notes', async (req, res, next) => {
+router.get('/codenotes', async (req, res, next) => {
   try {
     const notes = await database.getCodeNotes();
     res.json(notes);
@@ -52,7 +52,7 @@ router.get('/code/notes', async (req, res, next) => {
   }
 });
 
-router.post('/code/notes', async (req, res, next) => {
+router.post('/codenotes', async (req, res, next) => {
   try {
     if(req.headers.authorization === process.env.ADMIN_KEY) {
       const note = await database.insertIntoCodeNotes(req.body);
@@ -67,7 +67,67 @@ router.post('/code/notes', async (req, res, next) => {
   }
 });
 
-router.get('/code/notes/:link', async (req, res, next) => {
+router.get('/codenotes/drafts', async (req, res, next) => {
+  try {
+    //if(req.headers.authorization === process.env.ADMIN_KEY) {
+      const note = await database.getCodeNotesDrafts();
+      res.json(note);
+    //}
+    //else {
+      //res.status(401).send('Unauthorized');
+    //}
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.post('/codenotes/drafts', async (req, res, next) => {
+  try {
+    if(req.headers.authorization === process.env.ADMIN_KEY) {
+      const note = await database.insertIntoCodeNotesDrafts(req.body);
+      res.json(note);
+    }
+    else {
+      res.status(401).send('Unauthorized');
+    }
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.put('/codenotes/drafts/:id', async (req, res, next) => {
+  try {
+    if(req.headers.authorization === process.env.ADMIN_KEY) {
+      const note = await database.updateCodeNotesDraft(req.params.id, req.body);
+      res.json(note);
+    }
+    else {
+      res.status(401).send('Unauthorized');
+    }
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.put('/codenotes/:id', async (req, res, next) => {
+  try {
+    if(req.headers.authorization === process.env.ADMIN_KEY) {
+      const note = await database.updateCodeNote(req.params.id ,req.body);
+      res.json(note);
+    }
+    else {
+      res.status(401).send('Unauthorized');
+    }
+  }
+  catch(err) {
+    next(err);
+  }
+});
+
+router.get('/codenotes/:link', async (req, res, next) => {
   try {
     const note = await database.getCodeNoteByLink(req.params.link);
     res.json(note);

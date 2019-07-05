@@ -4,7 +4,7 @@ import CreateOrUpdateCodeNote from '../components/CreateOrUpdateCodeNote';
 export default function CreateCodeNote(props) {
   return (
     <div>
-      <CreateOrUpdateCodeNote history={props.history}/>
+      <CreateOrUpdateCodeNote />
     </div>
   );
 }
