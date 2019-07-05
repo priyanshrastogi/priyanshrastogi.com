@@ -122,7 +122,7 @@ exports.getCodeNotes = () => new Promise(async (resolve, reject) => {
     else {
       notes = db.collection('notes');
     }
-    const result = await notes.find({});
+    const result = await notes.find({}).sort({createdOn: -1});
     resolve(await result.toArray());
   }
   catch(err) {

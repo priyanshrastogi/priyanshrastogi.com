@@ -67,6 +67,19 @@ export const postCodeNote = (note, key, callback) => async dispatch => {
   }
 }
 
+export const updateCodeNote = (id, note, key, callback) => async dispatch => {
+  try {
+    const res = await axios.put(`${API_ROOT_URL}/codenotes/${id}`, note, {
+      headers: {'Authorization': key}
+    });
+    dispatch({type: GET_CODE_NOTE, payload: res.data});
+    callback();  
+  }
+  catch(err) {
+    console.log(err);
+  }
+}
+
 export const getCodeNotesDrafts = () => async dispatch => {
   try {
     const res = await axios.get(`${API_ROOT_URL}/codenotes/drafts`);

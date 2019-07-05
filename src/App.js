@@ -13,6 +13,7 @@ import CreateCodeNotePage from './pages/CreateCodeNote';
 import ScrollToTop from './components/ScrollToTop';
 import CodeNotesDraftsPage from './pages/CodeNotesDrafts';
 import EditCodeNoteDraft from './pages/EditCodeNoteDraft';
+import EditCodeNote from './pages/EditCodeNote';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
@@ -29,6 +30,7 @@ function App() {
               <Route exact path='/codenotes/drafts' component={CodeNotesDraftsPage}/>
               <Route exact path='/codenotes/drafts/:id' component={EditCodeNoteDraft}/>
               <Route exact path='/codenotes/:link' component={CodeNotesDetailPage}/>
+              <Route exact path='/codenotes/:link/edit' component={EditCodeNote}/>
               <Route component={Page404} />
             </Switch>
           </ScrollToTop>

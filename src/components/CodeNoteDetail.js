@@ -8,7 +8,7 @@ import { getCodeNote } from '../actions';
 class CodeNoteDetail extends Component {
 
   componentDidMount() {
-    if(!this.props.note || !this.props.note.code) {
+    if(!this.props.note) {
       this.props.getCodeNote(this.props.match.params.link)
     }
   }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { postCodeNote } from '../actions';
+import { postCodeNote, updateCodeNote } from '../actions';
 import { saveDraft } from '../services'; 
 import CodeBlock from '../components/CodeBlock';
 import Header from '../components/Header';
@@ -20,7 +20,7 @@ function CreateOrUpdateCodeNote(props) {
   const _publishNote = (e) => {
     e.preventDefault();
     props.postCodeNote({title, link, markdown}, key, () => {
-      props.history.push('/codenotes');
+      props.history.push(`/codenotes/${link}`);
     });
   }
 
@@ -38,6 +38,9 @@ function CreateOrUpdateCodeNote(props) {
 
   const _updateNote = (e) => {
     e.preventDefault();
+    props.updateCodeNote(id, {title, link, markdown}, key, () => {
+      props.history.push(`/codenotes/${link}`);
+    })
   }
 
   return (
@@ -123,4 +126,4 @@ CreateOrUpdateCodeNote.defaultProps = {
   isPublished: false
 }
 
-export default withRouter(connect(null, { postCodeNote })(CreateOrUpdateCodeNote));
+export default withRouter(connect(null, { postCodeNote, updateCodeNote })(CreateOrUpdateCodeNote));
