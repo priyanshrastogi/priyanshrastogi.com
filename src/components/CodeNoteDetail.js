@@ -36,7 +36,7 @@ class CodeNoteDetail extends Component {
       return (
         <div className='section'  style={{marginBottom: 100}}>
           <div className='text-center'>
-            <p>Fetching the code note for you...</p>
+            <p>Fetching the note for you...</p>
           </div>
         </div>
       );

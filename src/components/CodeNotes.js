@@ -15,7 +15,7 @@ class CodeNotes extends Component {
     return _.map(this.props.notes, (note) => {
       return (
         <div key={note._id}>
-          <p><Link to={`/codenotes/${note.link}`} style={{color: 'inherit'}}>{note.title}</Link></p>
+          <p><Link to={`/notes/${note.link}`} style={{color: 'inherit'}}>{note.title}</Link></p>
         </div>
       )
     })
@@ -24,7 +24,7 @@ class CodeNotes extends Component {
   renderButton = () => {
     return (
       <div>
-        <Link to='/codenotes' style={{textAlign: 'center', color: 'inherit'}}>View All Code Notes</Link>
+        <Link to='/notes' style={{textAlign: 'center', color: 'inherit'}}>View All Notes</Link>
       </div>
     )
   }
@@ -33,7 +33,7 @@ class CodeNotes extends Component {
     if(Object.entries(this.props.notes).length === 0) {
       return (
         <div className='section'>
-          {this.props.showHeader ? <h2><span className='topic-highlight'># code notes</span></h2>: null}
+          {this.props.showHeader ? <h2><span className='topic-highlight'># notes</span></h2>: null}
           <div className='content'>
             <p>Fetching notes for you...</p>
           </div>
@@ -43,7 +43,7 @@ class CodeNotes extends Component {
     else {
       return (
         <div className='section'>
-         {this.props.showHeader ? <h2><span className='topic-highlight'># code notes</span></h2>: null}
+         {this.props.showHeader ? <h2><span className='topic-highlight'># notes</span></h2>: null}
           <div className='content'>
             {this.renderList()}
           </div>

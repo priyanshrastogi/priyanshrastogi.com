@@ -25,12 +25,12 @@ function App() {
           <ScrollToTop>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/codenotes' component={CodeNotesPage}/>
-              <Route exact path='/codenotes/create' component={CreateCodeNotePage}/>
-              <Route exact path='/codenotes/drafts' component={CodeNotesDraftsPage}/>
-              <Route exact path='/codenotes/drafts/:id' component={EditCodeNoteDraft}/>
-              <Route exact path='/codenotes/:link' component={CodeNotesDetailPage}/>
-              <Route exact path='/codenotes/:link/edit' component={EditCodeNote}/>
+              <Route exact path='/notes' component={CodeNotesPage}/>
+              <Route exact path='/notes/create' component={CreateCodeNotePage}/>
+              <Route exact path='/notes/drafts' component={CodeNotesDraftsPage}/>
+              <Route exact path='/notes/drafts/:id' component={EditCodeNoteDraft}/>
+              <Route exact path='/notes/:link' component={CodeNotesDetailPage}/>
+              <Route exact path='/notes/:link/edit' component={EditCodeNote}/>
               <Route component={Page404} />
             </Switch>
           </ScrollToTop>

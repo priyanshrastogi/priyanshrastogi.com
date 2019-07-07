@@ -20,7 +20,7 @@ function CreateOrUpdateCodeNote(props) {
   const _publishNote = (e) => {
     e.preventDefault();
     props.postCodeNote({title, link, markdown}, key, () => {
-      props.history.push(`/codenotes/${link}`);
+      props.history.push(`/notes/${link}`);
     });
   }
 
@@ -39,28 +39,28 @@ function CreateOrUpdateCodeNote(props) {
   const _updateNote = (e) => {
     e.preventDefault();
     props.updateCodeNote(id, {title, link, markdown}, key, () => {
-      props.history.push(`/codenotes/${link}`);
+      props.history.push(`/notes/${link}`);
     })
   }
 
   return (
     <div className='row' style={{marginLeft: 10, marginRight: 10, minHeight: '100vh'}}>
       <div className='content col-md-6'>
-      <Header name='# code notes'/>
-      <h5 style={{textAlign: 'center', marginBottom: 20, marginTop: 30}}>Create A Code Note.</h5>
+      <Header name='# notes'/>
+      <h5 style={{textAlign: 'center', marginBottom: 20, marginTop: 30}}>{`${props.isPublished ? 'Update' : 'Create'} A Note.`}</h5>
         <form onSubmit={(e) => e.preventDefault()}>
           <input 
             type='text'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder='Title of Code Note'
+            placeholder='Title of Note'
             style={{width: '100%', marginBottom: 20, height: 40}}
           />
           <input 
             type='text'
             value={link}
             onChange={(e) => setLink(e.target.value)}
-            placeholder='Unique Link of Code Note'
+            placeholder='Unique Link of Note'
             style={{width: '100%', marginBottom: 20, height: 40}}
           />
           ​<textarea
@@ -68,7 +68,7 @@ function CreateOrUpdateCodeNote(props) {
             rows={20}
             onChange={(e) => setMarkdown(e.target.value)}
             style={{width: '100%', marginBottom: 15}}
-            placeholder='Body of Code Note in Markdown'
+            placeholder='Body of Note in Markdown'
           />
           <input 
             type='text'

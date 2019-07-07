@@ -45,7 +45,7 @@ export default function Subscribe() {
 
   return (
     <div className='section'>
-      <p style={{textAlign: 'center'}}>Get latest blog and codenotes updates right into your inbox.</p>
+      <p style={{textAlign: 'center'}}>Get latest blog and notes updates right into your inbox.</p>
       <div className='content col-md-6 offset-md-3' style={{paddingTop: 10}}>
         {subscribeMessage === '' ? null : <p className='text-success text-center'>{subscribeMessage}</p>}
         <form onSubmit={handleSubmit}>

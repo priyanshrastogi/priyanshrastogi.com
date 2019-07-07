@@ -6,7 +6,7 @@ import CodeNotesDrafts from '../components/CodeNotesDrafts';
 export default function CodeNotesDraftsPage() {
   return (
     <div className='container'>
-      <Header name='# code notes'/>
+      <Header name='# notes'/>
       <CodeNotesDrafts/>
         <div style={{marginTop: 50, marginBottom: 100}}>
           <div>

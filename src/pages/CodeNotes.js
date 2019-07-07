@@ -6,7 +6,7 @@ import CodeNotes from '../components/CodeNotes';
 export default function CodeNotesPage() {
   return (
     <div className='container'>
-      <Header name='# code notes'/>
+      <Header name='# notes'/>
       <CodeNotes showHeader={false} showGotoPageButton={false}/>
         <div style={{marginTop: 50, marginBottom: 100}}>
           <div>

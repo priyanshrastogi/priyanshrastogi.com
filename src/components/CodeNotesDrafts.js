@@ -15,7 +15,7 @@ class CodeNotesDrafts extends Component {
     return _.map(this.props.drafts, (note) => {
       return (
         <div key={note._id}>
-          <p><Link to={`/codenotes/drafts/${note._id}`} style={{color: 'inherit'}}>{note.title}</Link></p>
+          <p><Link to={`/notes/drafts/${note._id}`} style={{color: 'inherit'}}>{note.title}</Link></p>
         </div>
       )
     })
