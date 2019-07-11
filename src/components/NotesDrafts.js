@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { getCodeNotesDrafts } from '../actions';
+import { getNotesDrafts } from '../actions';
 
-class CodeNotesDrafts extends Component {
+class NotesDrafts extends Component {
 
   componentDidMount() {
-    this.props.getCodeNotesDrafts();
+    this.props.getNotesDrafts();
   }
 
   renderList = () => {
@@ -45,4 +45,4 @@ class CodeNotesDrafts extends Component {
 
 const mapStateToProps = (state) => ({drafts: state.drafts});
 
-export default connect(mapStateToProps, { getCodeNotesDrafts })(CodeNotesDrafts);
+export default connect(mapStateToProps, { getNotesDrafts })(NotesDrafts);

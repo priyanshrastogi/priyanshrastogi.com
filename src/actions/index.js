@@ -34,9 +34,9 @@ export const getGithubRepos = () => async dispatch => {
   }
 }
 
-export const getCodeNotes = () => async dispatch => {
+export const getNotes = () => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/codenotes`);
+    const res = await axios.get(`${API_ROOT_URL}/notes`);
     dispatch({type: GET_CODE_NOTES, payload: res.data}); 
   }
   catch(err) {
@@ -44,9 +44,9 @@ export const getCodeNotes = () => async dispatch => {
   }
 }
 
-export const getCodeNote = (link) => async dispatch => {
+export const getNote = (link) => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/codenotes/${link}`);
+    const res = await axios.get(`${API_ROOT_URL}/notes/${link}`);
     dispatch({type: GET_CODE_NOTE, payload: res.data}); 
   }
   catch(err) {
@@ -54,9 +54,9 @@ export const getCodeNote = (link) => async dispatch => {
   }
 }
 
-export const postCodeNote = (note, key, callback) => async dispatch => {
+export const postNote = (note, key, callback) => async dispatch => {
   try {
-    const res = await axios.post(`${API_ROOT_URL}/codenotes`, note, {
+    const res = await axios.post(`${API_ROOT_URL}/notes`, note, {
       headers: {'Authorization': key}
     });
     dispatch({type: GET_CODE_NOTE, payload: res.data});
@@ -67,9 +67,9 @@ export const postCodeNote = (note, key, callback) => async dispatch => {
   }
 }
 
-export const updateCodeNote = (id, note, key, callback) => async dispatch => {
+export const updateNote = (id, note, key, callback) => async dispatch => {
   try {
-    const res = await axios.put(`${API_ROOT_URL}/codenotes/${id}`, note, {
+    const res = await axios.put(`${API_ROOT_URL}/notes/${id}`, note, {
       headers: {'Authorization': key}
     });
     dispatch({type: GET_CODE_NOTE, payload: res.data});
@@ -80,9 +80,9 @@ export const updateCodeNote = (id, note, key, callback) => async dispatch => {
   }
 }
 
-export const getCodeNotesDrafts = () => async dispatch => {
+export const getNotesDrafts = () => async dispatch => {
   try {
-    const res = await axios.get(`${API_ROOT_URL}/codenotes/drafts`);
+    const res = await axios.get(`${API_ROOT_URL}/notes/drafts`);
     dispatch({type: GET_CODE_NOTES_DRAFTS, payload: res.data}); 
   }
   catch(err) {

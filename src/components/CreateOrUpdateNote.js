@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { postCodeNote, updateCodeNote } from '../actions';
+import { postNote, updateNote } from '../actions';
 import { saveDraft } from '../services'; 
-import CodeBlock from '../components/CodeBlock';
-import Header from '../components/Header';
+import CodeBlock from './CodeBlock';
+import Header from './Header';
 
-function CreateOrUpdateCodeNote(props) {
+function CreateOrUpdateNote(props) {
   
   const [id, setId] = useState(props.note ? props.note._id : '');
   const [title, setTitle] = useState(props.note ?  props.note.title: '');
@@ -19,7 +19,7 @@ function CreateOrUpdateCodeNote(props) {
 
   const _publishNote = (e) => {
     e.preventDefault();
-    props.postCodeNote({title, link, markdown}, key, () => {
+    props.postNote({title, link, markdown}, key, () => {
       props.history.push(`/notes/${link}`);
     });
   }
@@ -38,7 +38,7 @@ function CreateOrUpdateCodeNote(props) {
 
   const _updateNote = (e) => {
     e.preventDefault();
-    props.updateCodeNote(id, {title, link, markdown}, key, () => {
+    props.updateNote(id, {title, link, markdown}, key, () => {
       props.history.push(`/notes/${link}`);
     })
   }
@@ -118,12 +118,12 @@ function CreateOrUpdateCodeNote(props) {
   );
 }
 
-CreateOrUpdateCodeNote.propTypes = {
+CreateOrUpdateNote.propTypes = {
   isPublished: PropTypes.bool
 }
 
-CreateOrUpdateCodeNote.defaultProps = {
+CreateOrUpdateNote.defaultProps = {
   isPublished: false
 }
 
-export default withRouter(connect(null, { postCodeNote, updateCodeNote })(CreateOrUpdateCodeNote));
+export default withRouter(connect(null, { postNote, updateNote })(CreateOrUpdateNote));

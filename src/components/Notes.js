@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { getCodeNotes } from '../actions';
+import { getNotes } from '../actions';
 
-class CodeNotes extends Component {
+class Notes extends Component {
 
   componentDidMount() {
-    this.props.getCodeNotes();
+    this.props.getNotes();
   }
 
   renderList = () => {
@@ -56,15 +56,15 @@ class CodeNotes extends Component {
 
 }
 
-CodeNotes.propTypes = {
+Notes.propTypes = {
   showGotoPageButton: PropTypes.bool
 }
 
-CodeNotes.defaultProps = {
+Notes.defaultProps = {
   showGotoPageButton: true,
   showHeader: true
 }
 
 const mapStateToProps = (state) => ({notes: state.notes});
 
-export default connect(mapStateToProps, { getCodeNotes })(CodeNotes);
+export default connect(mapStateToProps, { getNotes })(Notes);

@@ -42,9 +42,9 @@ router.get('/githubrepos', async (req, res, next) => {
   }
 });
 
-router.get('/codenotes', async (req, res, next) => {
+router.get('/notes', async (req, res, next) => {
   try {
-    const notes = await database.getCodeNotes();
+    const notes = await database.getNotes();
     res.json(notes);
   }
   catch(err) {
@@ -52,10 +52,10 @@ router.get('/codenotes', async (req, res, next) => {
   }
 });
 
-router.post('/codenotes', async (req, res, next) => {
+router.post('/notes', async (req, res, next) => {
   try {
     if(req.headers.authorization === process.env.ADMIN_KEY) {
-      const note = await database.insertIntoCodeNotes(req.body);
+      const note = await database.insertIntoNotes(req.body);
       res.json(note);
     }
     else {
@@ -67,10 +67,10 @@ router.post('/codenotes', async (req, res, next) => {
   }
 });
 
-router.get('/codenotes/drafts', async (req, res, next) => {
+router.get('/notes/drafts', async (req, res, next) => {
   try {
     //if(req.headers.authorization === process.env.ADMIN_KEY) {
-      const note = await database.getCodeNotesDrafts();
+      const note = await database.getNotesDrafts();
       res.json(note);
     //}
     //else {
@@ -82,10 +82,10 @@ router.get('/codenotes/drafts', async (req, res, next) => {
   }
 });
 
-router.post('/codenotes/drafts', async (req, res, next) => {
+router.post('/notes/drafts', async (req, res, next) => {
   try {
     if(req.headers.authorization === process.env.ADMIN_KEY) {
-      const note = await database.insertIntoCodeNotesDrafts(req.body);
+      const note = await database.insertIntoNotesDrafts(req.body);
       res.json(note);
     }
     else {
@@ -97,10 +97,10 @@ router.post('/codenotes/drafts', async (req, res, next) => {
   }
 });
 
-router.put('/codenotes/drafts/:id', async (req, res, next) => {
+router.put('/notes/drafts/:id', async (req, res, next) => {
   try {
     if(req.headers.authorization === process.env.ADMIN_KEY) {
-      const note = await database.updateCodeNotesDraft(req.params.id, req.body);
+      const note = await database.updateNotesDraft(req.params.id, req.body);
       res.json(note);
     }
     else {
@@ -112,10 +112,10 @@ router.put('/codenotes/drafts/:id', async (req, res, next) => {
   }
 });
 
-router.put('/codenotes/:id', async (req, res, next) => {
+router.put('/notes/:id', async (req, res, next) => {
   try {
     if(req.headers.authorization === process.env.ADMIN_KEY) {
-      const note = await database.updateCodeNote(req.params.id ,req.body);
+      const note = await database.updateNote(req.params.id ,req.body);
       res.json(note);
     }
     else {
@@ -127,9 +127,9 @@ router.put('/codenotes/:id', async (req, res, next) => {
   }
 });
 
-router.get('/codenotes/:link', async (req, res, next) => {
+router.get('/notes/:link', async (req, res, next) => {
   try {
-    const note = await database.getCodeNoteByLink(req.params.link);
+    const note = await database.getNoteByLink(req.params.link);
     res.json(note);
   }
   catch(err) {

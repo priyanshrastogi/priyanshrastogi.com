@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import CodeNotesDrafts from '../components/CodeNotesDrafts';
+import NotesDrafts from '../components/NotesDrafts';
 
-export default function CodeNotesDraftsPage() {
+export default function NotesDraftsPage() {
   return (
     <div className='container'>
       <Header name='# notes'/>
-      <CodeNotesDrafts/>
+      <NotesDrafts/>
         <div style={{marginTop: 50, marginBottom: 100}}>
           <div>
             <Link to={'/'} style={{color: 'inherit'}}>Back to Homepage</Link>

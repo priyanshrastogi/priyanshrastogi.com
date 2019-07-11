@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import ReactMarkdown from 'react-markdown';
 import moment from 'moment';
 import CodeBlock from './CodeBlock';
-import { getCodeNote } from '../actions';
+import { getNote } from '../actions';
 
-class CodeNoteDetail extends Component {
+class NoteDetail extends Component {
 
   componentDidMount() {
     if(!this.props.note) {
-      this.props.getCodeNote(this.props.match.params.link)
+      this.props.getNote(this.props.match.params.link)
     }
   }
 
@@ -49,4 +49,4 @@ const mapStateToProps = (state, props) => {
   return {note: state.notes[props.match.params.link]};
 }
 
-export default connect(mapStateToProps, { getCodeNote })(CodeNoteDetail);
+export default connect(mapStateToProps, { getNote })(NoteDetail);

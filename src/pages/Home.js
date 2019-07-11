@@ -7,7 +7,7 @@ import BlogPosts from '../components/BlogPosts';
 //import Tweets from '../components/Tweets';
 import Connect from '../components/Connect';
 import Links from '../components/Links';
-import CodeNotes from '../components/CodeNotes';
+import Notes from '../components/Notes';
 import Subscribe from '../components/Subscribe';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Intro/>
       <About/>
       <BlogPosts/>
-      <CodeNotes showGotoPageButton={false}/>
+      <Notes showGotoPageButton={false}/>
       <Connect/>
       <Links/>
       <Subscribe/>

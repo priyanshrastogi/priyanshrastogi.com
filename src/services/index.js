@@ -21,13 +21,13 @@ export const subscribeUser = (email) => new Promise(async (resolve, reject) => {
 export const saveDraft = (id, note, key) => new Promise(async (resolve, reject) => {
   try {
     if(id === '') {
-      const { data } = await axios.post(`${API_ROOT_URL}/codenotes/drafts`, note, {
+      const { data } = await axios.post(`${API_ROOT_URL}/notes/drafts`, note, {
         headers: {'Authorization': key}
       });
       resolve(data);
     }
     else {
-      const { data } = await axios.put(`${API_ROOT_URL}/codenotes/drafts/${id}`, note, {
+      const { data } = await axios.put(`${API_ROOT_URL}/notes/drafts/${id}`, note, {
         headers: {'Authorization': key}
       });
       resolve(data);

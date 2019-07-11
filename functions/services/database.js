@@ -50,7 +50,7 @@ exports.getSubscribers = () => new Promise(async (resolve, reject) => {
   }
 });
 
-exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
+exports.insertIntoNotes = (note) => new Promise(async (resolve, reject) => {
   let notes;
   try {
     if(db === null) {
@@ -70,7 +70,7 @@ exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
   }
 });
 
-exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
+exports.insertIntoNotes = (note) => new Promise(async (resolve, reject) => {
   let notes;
   try {
     if(db === null) {
@@ -91,7 +91,7 @@ exports.insertIntoCodeNotes = (note) => new Promise(async (resolve, reject) => {
   }
 });
 
-exports.updateCodeNote = (id, note) => new Promise(async (resolve, reject) => {
+exports.updateNote = (id, note) => new Promise(async (resolve, reject) => {
   let notes;
   try {
     if(db === null) {
@@ -111,7 +111,7 @@ exports.updateCodeNote = (id, note) => new Promise(async (resolve, reject) => {
   }
 });
 
-exports.getCodeNotes = () => new Promise(async (resolve, reject) => {
+exports.getNotes = () => new Promise(async (resolve, reject) => {
   let notes;
   try {
     if(db === null) {
@@ -131,7 +131,7 @@ exports.getCodeNotes = () => new Promise(async (resolve, reject) => {
   }
 });
 
-exports.getCodeNoteByLink = (link) => new Promise(async (resolve, reject) => {
+exports.getNoteByLink = (link) => new Promise(async (resolve, reject) => {
   let notes;
   try {
     if(db === null) {
@@ -151,7 +151,7 @@ exports.getCodeNoteByLink = (link) => new Promise(async (resolve, reject) => {
   }
 });
 
-exports.insertIntoCodeNotesDrafts = (note) => new Promise(async (resolve, reject) => {
+exports.insertIntoNotesDrafts = (note) => new Promise(async (resolve, reject) => {
   let drafts;
   try {
     if(db === null) {
@@ -172,7 +172,7 @@ exports.insertIntoCodeNotesDrafts = (note) => new Promise(async (resolve, reject
   }
 });
 
-exports.updateCodeNotesDraft = (id, note) => new Promise(async (resolve, reject) => {
+exports.updateNotesDraft = (id, note) => new Promise(async (resolve, reject) => {
   let drafts;
   try {
     if(db === null) {
@@ -192,7 +192,7 @@ exports.updateCodeNotesDraft = (id, note) => new Promise(async (resolve, reject)
   }
 });
 
-exports.getCodeNotesDrafts = () => new Promise(async (resolve, reject) => {
+exports.getNotesDrafts = () => new Promise(async (resolve, reject) => {
   let drafts;
   try {
     if(db === null) {

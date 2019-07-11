@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCodeNotesDrafts } from '../actions';
-import CreateOrUpdateCodeNote from '../components/CreateOrUpdateCodeNote';
+import { getNotesDrafts } from '../actions';
+import CreateOrUpdateNote from '../components/CreateOrUpdateNote';
 
-class CodeNoteDetail extends Component {
+class NoteDetail extends Component {
 
   componentDidMount() {
     if(!this.props.note) {
-      this.props.getCodeNotesDrafts();
+      this.props.getNotesDrafts();
     }
   }
 
   render() {
     const { note } = this.props;
     if(note) {
-      return <CreateOrUpdateCodeNote note={note}/>
+      return <CreateOrUpdateNote note={note}/>
     }
     else {
       return (
@@ -33,4 +33,4 @@ const mapStateToProps = (state, props) => {
   return {note: state.drafts[props.match.params.id]};
 }
 
-export default connect(mapStateToProps, { getCodeNotesDrafts })(CodeNoteDetail);
+export default connect(mapStateToProps, { getNotesDrafts })(NoteDetail);

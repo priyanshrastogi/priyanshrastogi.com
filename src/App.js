@@ -7,13 +7,13 @@ import reducers from './reducers';
 import Home from './pages/Home';
 import Page404 from './pages/Page404';
 import Footer from './components/Footer';
-import CodeNotesPage from './pages/CodeNotes';
-import CodeNotesDetailPage from './pages/CodeNoteDetail';
-import CreateCodeNotePage from './pages/CreateCodeNote';
+import NotesPage from './pages/Notes';
+import NotesDetailPage from './pages/NoteDetail';
+import CreateNotePage from './pages/CreateNote';
 import ScrollToTop from './components/ScrollToTop';
-import CodeNotesDraftsPage from './pages/CodeNotesDrafts';
-import EditCodeNoteDraft from './pages/EditCodeNoteDraft';
-import EditCodeNote from './pages/EditCodeNote';
+import NotesDraftsPage from './pages/NotesDrafts';
+import EditNoteDraft from './pages/EditNoteDraft';
+import EditNote from './pages/EditNote';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
@@ -25,12 +25,12 @@ function App() {
           <ScrollToTop>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/notes' component={CodeNotesPage}/>
-              <Route exact path='/notes/create' component={CreateCodeNotePage}/>
-              <Route exact path='/notes/drafts' component={CodeNotesDraftsPage}/>
-              <Route exact path='/notes/drafts/:id' component={EditCodeNoteDraft}/>
-              <Route exact path='/notes/:link' component={CodeNotesDetailPage}/>
-              <Route exact path='/notes/:link/edit' component={EditCodeNote}/>
+              <Route exact path='/notes' component={NotesPage}/>
+              <Route exact path='/notes/create' component={CreateNotePage}/>
+              <Route exact path='/notes/drafts' component={NotesDraftsPage}/>
+              <Route exact path='/notes/drafts/:id' component={EditNoteDraft}/>
+              <Route exact path='/notes/:link' component={NotesDetailPage}/>
+              <Route exact path='/notes/:link/edit' component={EditNote}/>
               <Route component={Page404} />
             </Switch>
           </ScrollToTop>

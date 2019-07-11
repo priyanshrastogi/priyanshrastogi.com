@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCodeNote } from '../actions';
-import CreateOrUpdateCodeNote from '../components/CreateOrUpdateCodeNote';
+import { getNote } from '../actions';
+import CreateOrUpdateNote from '../components/CreateOrUpdateNote';
 
-class EditCodeNotePage extends Component {
+class EditNotePage extends Component {
 
   componentDidMount() {
     if(!this.props.note) {
-      this.props.getCodeNote(this.props.match.params.link)
+      this.props.getNote(this.props.match.params.link)
     }
   }
 
   render() {
     const { note } = this.props;
     if(note) {
-      return <CreateOrUpdateCodeNote isPublished note={note}/>
+      return <CreateOrUpdateNote isPublished note={note}/>
     }
     else {
       return (
@@ -33,4 +33,4 @@ const mapStateToProps = (state, props) => {
   return {note: state.notes[props.match.params.link]};
 }
 
-export default connect(mapStateToProps, { getCodeNote })(EditCodeNotePage);
+export default connect(mapStateToProps, { getNote })(EditNotePage);
