@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import projectReducer from './projects';
+import posts from './posts';
+import repos from './repos';
+import notes from './notes';
+import drafts from './drafts';
 
-const rootReducer = combineReducers({
-    projects: projectReducer
+export default combineReducers({
+  posts,
+  repos,
+  notes,
+  drafts
 });
-
-export default rootReducer;
