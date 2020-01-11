@@ -9,6 +9,7 @@
 # production
 /build
 /functions-build
+/posts
 
 # secrets
 secrets.txt
