@@ -9,6 +9,7 @@ import Connect from '../components/Connect';
 import Links from '../components/Links';
 import Notes from '../components/Notes';
 import Subscribe from '../components/Subscribe';
+import Projects from '../components/Projects';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Intro/>
       <About/>
       <BlogPosts/>
+      <Projects showGotoPageButton={false}/>
       <Notes showGotoPageButton={false}/>
       <Connect/>
       <Links/>

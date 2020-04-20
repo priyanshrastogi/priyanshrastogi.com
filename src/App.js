@@ -14,6 +14,8 @@ import ScrollToTop from './components/ScrollToTop';
 import NotesDraftsPage from './pages/NotesDrafts';
 import EditNoteDraft from './pages/EditNoteDraft';
 import EditNote from './pages/EditNote';
+import Projects from './pages/Projects';
+import ProjectDetailPage from './pages/ProjectDetails';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
@@ -31,6 +33,8 @@ function App() {
               <Route exact path='/notes/drafts/:id' component={EditNoteDraft}/>
               <Route exact path='/notes/:link' component={NotesDetailPage}/>
               <Route exact path='/notes/:link/edit' component={EditNote}/>
+              <Route exact path='/work' component={Projects}/>
+              <Route exact path='/work/:id' component={ProjectDetailPage}/>
               <Route component={Page404} />
             </Switch>
           </ScrollToTop>
