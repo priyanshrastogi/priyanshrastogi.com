@@ -1,7 +1,6 @@
 {
-  "name": "priyanshrastogi-next",
-  "version": "0.1.0",
-  "private": true,
+  "name": "priyanshrastogi.com",
+  "version": "4.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
