@@ -1,15 +1,14 @@
 import styled from '@emotion/styled';
 
-export const BlogWrapper = styled.div`
-  min-height: 95vh;
-  margin-top: 24px;
+export const ContactWrapper = styled.div`
+  margin-top: 48px;
 
   @media only screen and (max-width: 812px) {
     margin-top: 36px;
   }
 `;
 
-export const BlogHeaderText = styled.span`
+export const ContactHeaderText = styled.span`
   padding: 10px 25px;
   background: linear-gradient(90deg, ${props => props.theme.gradients[props.index].start + ', ' + props.theme.gradients[props.index].end}); 
   font-size: 36px;
@@ -22,14 +21,10 @@ export const BlogHeaderText = styled.span`
   }
 `;
 
-export const BlogPostsContainer = styled.div`
-  margin-top: 36px;
-`;
-
-export const BlogPostTitle = styled.a`
+export const ContactText = styled.p`
   display: block;
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: ${props => props.theme.colors.primary};
 
   @media only screen and (max-width: 812px) {
