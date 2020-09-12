@@ -28,9 +28,19 @@ export const Brand = styled.h1`
 `;
 
 export const Footer = styled.div`
-  padding: 20px;
+  margin-top: 128px;
+  padding-bottom: 36px;
 `;
 
 export const FooterText = styled.p`
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
   color: ${props => props.theme.colors.primary};
+
+  @media only screen and (max-width: 812px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
 `;

@@ -1,32 +1,26 @@
 import React from 'react';
-import { createClient } from 'contentful';
-import Layout from '../components/layouts/Layout';
+import { getBlogPosts } from '../contentful';
 import Home from '../components/pages/Home';
 import Blog from '../components/pages/Blog';
+import Contact from '../components/pages/Contact';
+import Links from '../components/pages/Links';
 
 const Homepage = ({ posts }) => {
   return (
-    <Layout>
+    <React.Fragment>
       <Home />
       <Blog posts={posts}/>
-    </Layout>
+      <Links />
+      <Contact />
+    </React.Fragment>
   );
 }
 
 export async function getStaticProps() {
-  const contentful = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-  });
-
-  const posts = await contentful.getEntries({
-    'content_type': 'blogPost',
-    'order': '-fields.createdAt'
-  });
-  console.log(posts.items[0]);
+  const posts = await getBlogPosts();
   return {
     props: {
-      posts: posts.items
+      posts: posts
     }
   };
 }

@@ -10,9 +10,13 @@ const Layout = ({children}) => {
       <Container>
         {children}
       </Container>
-      {/*<Footer>
-        <FooterText>Copyright &copy; {new Date().getFullYear()}, Priyansh Rastogi. Licensed under the MIT License.</FooterText>
-      </Footer>*/}
+      <Footer>
+        <Container>
+          <FooterText>
+            Copyright &copy; {new Date().getFullYear()}, Priyansh Rastogi.
+          </FooterText>
+        </Container>
+      </Footer>
     </LayoutWrapper>
   )
 }
