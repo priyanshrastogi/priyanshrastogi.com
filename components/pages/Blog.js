@@ -6,7 +6,7 @@ const Blog = ({ posts }) => {
   return (
     <BlogWrapper>
       <BlogHeader>
-        <BlogHeaderText index={2}>From My Blog</BlogHeaderText>
+        <BlogHeaderText index={3}>From My Blog</BlogHeaderText>
       </BlogHeader>
       <BlogPostsContainer>
         {posts.map((post, index) => {

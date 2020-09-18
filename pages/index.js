@@ -3,14 +3,14 @@ import { getBlogPosts } from '../contentful';
 import Home from '../components/pages/Home';
 import Blog from '../components/pages/Blog';
 import Contact from '../components/pages/Contact';
-import Links from '../components/pages/Links';
+import Reviews from '../components/pages/Reviews';
 
 const Homepage = ({ posts }) => {
   return (
     <React.Fragment>
       <Home />
       <Blog posts={posts}/>
-      <Links />
+      <Reviews />
       <Contact />
     </React.Fragment>
   );
