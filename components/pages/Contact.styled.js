@@ -40,3 +40,7 @@ export const ContactText = styled.p`
     margin-bottom: 15px;
   }
 `;
+
+export const ContactLink = styled.a`
+  color: ${props => props.theme.colors.primary};
+`;

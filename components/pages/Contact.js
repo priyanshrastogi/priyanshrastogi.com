@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactWrapper, ContactHeaderText, ContactText, ContactHeader } from './Contact.styled';
+import { ContactWrapper, ContactHeaderText, ContactText, ContactHeader, ContactLink } from './Contact.styled';
 
 const Contact = () => {
   
@@ -8,7 +8,15 @@ const Contact = () => {
       <ContactHeader>
         <ContactHeaderText index={5}>Reach Me Out</ContactHeaderText>
       </ContactHeader>
-      <ContactText>You can say Hi on my Twitter, Instagram, LinkedIn, GitHub, or Email.</ContactText>
+      <ContactText>You can drop me a message or get to know me more on&nbsp;
+        <ContactLink href='https://twitter.com/priyanshx7' target='_blank'>Twitter</ContactLink>,&nbsp;
+        <ContactLink href='https://github.com/priyanshrastogi' target='_blank'>GitHub</ContactLink>,&nbsp;
+        <ContactLink href='https://linkedin.com/in/priyanshrastogi' target='_blank'>LinkedIn</ContactLink>,&nbsp;
+        <ContactLink href='https://instagram.com/priyanshrastogix' target='_blank'>Instagram</ContactLink>,&nbsp;
+        <ContactLink href='https://medium.com/@priyanshrastogi' target='_blank'>Medium</ContactLink>,
+        or&nbsp;
+        <ContactLink href='mailto:hello@priyanshrastogi.com' target='_blank'>Email</ContactLink>.
+        </ContactText>
     </ContactWrapper>
   );
 }
