@@ -14,7 +14,7 @@ const theme = {
       primary: '#fff',
     },
     colors: {
-      primary: '#000'
+      primary: '#000',
     },
     gradients
   },
@@ -23,7 +23,7 @@ const theme = {
       primary: '#000',
     },
     colors: {
-      primary: '#fff'
+      primary: '#fff',
     },
     gradients
   }

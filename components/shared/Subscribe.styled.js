@@ -64,3 +64,15 @@ export const Submit = styled.button`
     padding: 0px 20px;
   }
 `;
+
+export const SubscribeMessage = styled.p`
+  font-size: 28px;
+  color: ${props => props.theme.colors.primary};
+  margin-top: 20px;
+
+  @media only screen and (max-width: 812px) {
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+  }
+`;
