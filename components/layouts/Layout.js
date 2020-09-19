@@ -1,4 +1,5 @@
 import React from 'react';
+import Subscribe from '../shared/Subscribe';
 import { LayoutWrapper, Container, Header, Footer, Brand, FooterText } from './Layout.styled';
 
 const Layout = ({children}) => {
@@ -10,6 +11,7 @@ const Layout = ({children}) => {
       <Container>
         {children}
       </Container>
+      <Subscribe />
       <Footer>
         <Container>
           <FooterText>
