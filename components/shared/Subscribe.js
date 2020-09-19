@@ -36,8 +36,19 @@ const Subscribe = () => {
     <SubscribeWrapper index={4}>
       <SubscribeText>Get latest blog posts, reviews right into your inbox.</SubscribeText>
       <InputWrapper>
-        <Input index={6} value={email} onChange={e => setEmail(e.target.value.trim())}/>
-        <Submit index={5} disabled={email.length === 0 || loading} onClick={handleSubmit}>Subscribe</Submit>
+        <Input 
+          index={6} 
+          value={email} 
+          onChange={e => setEmail(e.target.value.trim().toLowerCase())}
+          placeholder='Enter Your Email'
+        />
+        <Submit 
+          index={5} 
+          disabled={email.length === 0 || loading} 
+          onClick={handleSubmit}
+        >
+          Subscribe
+        </Submit>
       </InputWrapper>
       {loading && <SubscribeMessage>Please wait while I add you to the list.</SubscribeMessage>}
       {message && <SubscribeMessage>{message}</SubscribeMessage>}

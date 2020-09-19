@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { getGameReviews } from '../../contentful';
 import GameReviewsIndex from '../../components/pages/GameReviewsIndex';
+import MetaTags from '../../components/shared/MetaTags';
 
 const GameReviewsPage = ({games}) => {
   return (
-    <GameReviewsIndex games={games}/>
+    <Fragment>
+      <MetaTags title='Game Reviews by Priyansh Rastogi'/>
+      <GameReviewsIndex games={games} />
+    </Fragment>
   )
 }
 
