@@ -35,7 +35,7 @@ export const GameTitlesContainer = styled.div`
 export const GameTitle = styled.a`
   display: block;
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: ${props => props.theme.colors.primary};
   cursor: pointer;
 
