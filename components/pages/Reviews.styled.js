@@ -28,14 +28,11 @@ export const ReviewsHeaderText = styled.p`
 `;
 
 export const ReviewText = styled.a`
-font-size: 36px;
-margin-bottom: 20px;
-color: ${props => props.theme.colors.primary};
-cursor: pointer;
-
-:hover {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: ${props => props.theme.colors.primary};
+  cursor: pointer;
   text-decoration: underline;
-}
 
 @media only screen and (max-width: 812px) {
   font-size: 28px;

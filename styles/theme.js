@@ -4,7 +4,7 @@ const gradients = [
   {start: '#FF4D4D', end: '#F9CB28'},
   {start: '#4776E6', end: '#8E54E9'},
   {start: '#FF512F', end: '#DD2476'},
-  {start: '#764BA2', end: '#667EEA'},
+  {start: '#8E2DE2', end: '#4A00E0'},
 ];
 
 const theme = {
