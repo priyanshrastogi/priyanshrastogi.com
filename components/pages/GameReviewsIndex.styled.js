@@ -45,6 +45,6 @@ export const GameTitle = styled.a`
 
   @media only screen and (max-width: 812px) {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 `

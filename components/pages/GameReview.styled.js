@@ -23,7 +23,7 @@ export const GameHeaderText = styled.p`
   background: linear-gradient(90deg, ${props => props.theme.gradients[props.index].start + ', ' + props.theme.gradients[props.index].end});
 
   @media only screen and (max-width: 812px) {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 40px;
   }
 `;
