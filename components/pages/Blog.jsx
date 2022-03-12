@@ -1,10 +1,10 @@
 import PostList from "../shared/PostList";
 import { BlogWrapper } from "./Blog.styled";
 
-const Blog = () => {
+const Blog = ({ posts }) => {
   return (
     <BlogWrapper>
-     <PostList />
+     <PostList posts={posts} />
     </BlogWrapper>
   );
 }

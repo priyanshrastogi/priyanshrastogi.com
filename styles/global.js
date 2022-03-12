@@ -12,18 +12,6 @@ const lightStyles = css`
   p {
     margin: 0px;
   }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #000; 
-  }
-   
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#7928CA, #FF0080);
-  }
 `;
 
 const GlobalStyle = () => {

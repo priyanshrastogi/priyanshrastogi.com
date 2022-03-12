@@ -1,7 +1,9 @@
 ---
 title: '3 Mantras That Changed My Life This Month'
+slug: '3-mantras'
 excerpt: "Till 2016, I lived a life in which, I never refused anything people gave me to do. I didn’t care about time that I’ll waste, trouble that…"
 date: '2017-01-22T05:30:00Z'
+published: true
 author:
   name: Priyansh Rastogi
 ---

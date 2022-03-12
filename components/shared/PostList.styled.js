@@ -47,3 +47,25 @@ export const PostDescription = styled.p`
     font-size: 0.85em;
   }
 `;
+
+export const ViewAllWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const ViewAll = styled.p`
+  cursor: pointer;
+  width: fit-content;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  text-decoration: none;
+  color: ${props => props.theme.colors.secondary};
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, ${props => props.theme.gradients[props.variant].start + ', ' + props.theme.gradients[props.variant].end});
+
+  @media only screen and (max-width: 812px) {
+    font-size: 1em;
+    line-height: 1.3em;
+  }
+`;

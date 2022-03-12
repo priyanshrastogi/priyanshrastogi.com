@@ -8,7 +8,7 @@ import { getParsedFileContentBySlug } from '../../lib/markdown';
 const BlogPostPage = ({ metadata, content }) => {
   return (
     <>
-      <MetaTags title={metadata.title} description={metadata.description} />
+      <MetaTags title={`${metadata.title} | Priyansh Rastogi`} description={metadata.excerpt} />
       <Layout hideHeader>
         <BlogPost content={content} />
       </Layout>

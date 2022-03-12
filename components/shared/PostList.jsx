@@ -1,35 +1,35 @@
+import moment from 'moment';
 import Link from "next/link";
-import { PostDate, PostDateWrapper, PostDescription, PostItem, PostMonth, PostsList, PostText, PostTitle } from "./PostList.styled"
+import { PostDate, PostDateWrapper, PostDescription, PostItem, PostMonth, PostsList, PostText, PostTitle, ViewAll, ViewAllWrapper } from "./PostList.styled"
 
-const PostList = () => {
+const PostList = ({ posts, viewAll, setViewAll }) => {
   return (
     <PostsList>
-      <PostItem>
-        <PostDateWrapper>
-          <PostDate>13</PostDate>
-          <PostMonth>Nov 2021</PostMonth>
-        </PostDateWrapper>
-        <PostText>
-          <Link href={"/blog/a-week-in-goa"} passHref>
-            <PostTitle>A week in Goa</PostTitle>
-          </Link>
-          <PostDescription>I lived in Goa for a week and here is what I did.</PostDescription>
-        </PostText>
-      </PostItem>
-      <PostItem>
-        <PostDateWrapper>
-          <PostDate>11</PostDate>
-          <PostMonth>Nov 2021</PostMonth>
-        </PostDateWrapper>
-        <PostText>
-          <Link href={"/blog/a-week-in-goa"} passHref>
-            <PostTitle>A week in Goa</PostTitle>
-          </Link>
-          <PostDescription>I lived in Goa for a week and here is what I did.</PostDescription>
-        </PostText>
-      </PostItem>
+      {(viewAll ? posts : posts.slice(0, 5)).map((post, index) => (
+        <PostItem key={index}>
+          <PostDateWrapper>
+            <PostDate>{moment(post.date).format('DD')}</PostDate>
+            <PostMonth>{moment(post.date).format('MMM YYYY')}</PostMonth>
+          </PostDateWrapper>
+          <PostText>
+            <Link href={`/blog/${post.slug}`} passHref>
+              <PostTitle>{post.title}</PostTitle>
+            </Link>
+            <PostDescription>{post.excerpt}</PostDescription>
+          </PostText>
+        </PostItem>
+      ))}
+      {!viewAll && (
+        <ViewAllWrapper>
+          <ViewAll variant="blueGreen" onClick={() => setViewAll(true)}>View All Posts</ViewAll>
+        </ViewAllWrapper>
+      )}
     </PostsList>
   );
+}
+
+PostList.defaultProps = {
+  viewAll: true
 }
 
 export default PostList;

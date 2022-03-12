@@ -1,7 +1,9 @@
 ---
 title: 'Snapchat on WhatsApp. Good or Bad?'
+slug: 'snapchat-on-whatsapp'
 excerpt: "Zuck did it again."
 date: '2017-02-24T05:30:00Z'
+published: true
 author:
   name: Priyansh Rastogi
 ---
