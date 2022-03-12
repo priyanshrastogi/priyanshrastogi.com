@@ -1,35 +1,23 @@
 import styled from '@emotion/styled';
 
 export const LayoutWrapper = styled.div`
-  background: ${props => props.theme.backgrounds.primary};
+  background: ${props => props.theme.background};
   min-height: 100vh;
 `;
 
 export const Container = styled.div`
-  padding: 0px 48px 0px 58px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 36px 0px;
   
   @media only screen and (max-width: 812px) {
-    padding: 0px 20px 0px 22px;
+    width: 88%;
+    margin: 0 auto;
   }
-
-`;
-
-export const Header = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 0px;
-  padding-top: 20px;
-`;
-
-export const Brand = styled.h1`
-  background: -webkit-linear-gradient(0deg, ${props => props.theme.gradients[props.index].start + ', ' + props.theme.gradients[props.index].end});
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 `;
 
 export const Footer = styled.div`
-  margin-top: 128px;
-  padding-bottom: 36px;
+  padding: 36px 0px;
 `;
 
 export const FooterText = styled.p`

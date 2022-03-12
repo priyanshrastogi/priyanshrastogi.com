@@ -1,30 +1,56 @@
 import styled from '@emotion/styled';
 
-export const HomeWrapper = styled.div`
-  display: flex;
-  min-height: 95vh;
-  align-items: center;
-  margin-top: -40px;
+export const HomeWrapper = styled.div``;
+
+export const Divider = styled.hr`
+  margin: 36px 0px;
+`;
+
+export const ShortBio = styled.div`
+  margin: 24px 0px;
+`;
+
+export const BioText = styled.div`
+  color: ${props => props.theme.colors.secondary};
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin-bottom: 18px;
 
   @media only screen and (max-width: 812px) {
-    margin-top: 48px;
-    align-items: flex-start;
+    font-size: 1em;
+    line-height: 1.3em;
   }
 `;
 
-export const HomeText = styled.p`
-  font-size: 36px;
-  line-height: 52px;
+export const ProfileLink = styled.a`
   color: ${props => props.theme.colors.primary};
+  font-size: 1.2em;
+  line-height: 1.4em;
+  text-decoration: none;
 
   @media only screen and (max-width: 812px) {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 1em;
+    line-height: 1.3em;
   }
 `;
 
-export const HighlightedText = styled.span`
-  padding: 5px;
-  background: linear-gradient(90deg, ${props => props.theme.gradients[props.index].start + ', ' + props.theme.gradients[props.index].end});
+export const PageLinks = styled.div`
+  margin: 36px 0px;
 `;
 
+export const PageLink = styled.a`
+  display: block;
+  width: fit-content;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  text-decoration: none;
+  color: ${props => props.theme.colors.secondary};
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, ${props => props.theme.gradients[props.variant].start + ', ' + props.theme.gradients[props.variant].end});
+
+  @media only screen and (max-width: 812px) {
+    font-size: 1em;
+    line-height: 1.3em;
+  }
+`;
