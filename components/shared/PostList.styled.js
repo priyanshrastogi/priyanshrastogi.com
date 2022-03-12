@@ -59,7 +59,7 @@ export const ViewAll = styled.p`
   font-size: 1.2em;
   line-height: 1.4em;
   text-decoration: none;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.white};
   padding: 8px 24px;
   border-radius: 4px;
   background: linear-gradient(90deg, ${props => props.theme.gradients[props.variant].start + ', ' + props.theme.gradients[props.variant].end});

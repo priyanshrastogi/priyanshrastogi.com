@@ -21,4 +21,9 @@ export const MarkdownWrapper = styled.div`
     white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
     word-wrap: break-word; /* IE 5.5+ */
   }
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.primary};
+  }
 `;

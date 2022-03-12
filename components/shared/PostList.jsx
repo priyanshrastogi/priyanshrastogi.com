@@ -21,7 +21,7 @@ const PostList = ({ posts, viewAll, setViewAll }) => {
       ))}
       {!viewAll && (
         <ViewAllWrapper>
-          <ViewAll variant="blueGreen" onClick={() => setViewAll(true)}>View All Posts</ViewAll>
+          <ViewAll variant="violetPink" onClick={() => setViewAll(true)}>View All Posts</ViewAll>
         </ViewAllWrapper>
       )}
     </PostsList>

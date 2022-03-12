@@ -44,7 +44,7 @@ export const PageLink = styled.a`
   font-size: 1.2em;
   line-height: 1.4em;
   text-decoration: none;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.white};
   padding: 8px 24px;
   border-radius: 4px;
   background: linear-gradient(90deg, ${props => props.theme.gradients[props.variant].start + ', ' + props.theme.gradients[props.variant].end});
@@ -53,4 +53,9 @@ export const PageLink = styled.a`
     font-size: 1em;
     line-height: 1.3em;
   }
+`;
+
+export const FlexEnd = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;

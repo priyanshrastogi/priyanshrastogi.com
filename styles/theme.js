@@ -4,6 +4,7 @@ const gradients = {
   orangeYellow: {start: '#FF4D4D', end: '#F9CB28'},
   blueIndigo: {start: '#4776E6', end: '#8E54E9'},
   orangePink: {start: '#FF512F', end: '#DD2476'},
+  deepBlue: {start: '#0575E6', end: '#021B79'}
 };
 
 const theme = {
@@ -12,6 +13,7 @@ const theme = {
     colors: {
       primary: '#3F72AF',
       secondary: '#080708',
+      white: '#F9F7F7'
     },
     gradients,
   },
@@ -20,6 +22,7 @@ const theme = {
     colors: {
       primary: '#3772FF',
       secondary: '#F9F7F7',
+      white: '#F9F7F7'
     },
     gradients
   }
