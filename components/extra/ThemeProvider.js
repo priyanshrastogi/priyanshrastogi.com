@@ -12,7 +12,7 @@ const ThemeProvider = ({ children }) => {
     const darkMode = window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (preference === 'light') {
       dispatch({ type: "LIGHTMODE" });
-    } else if(darkMode) {
+    } else if(darkMode || preference === 'dark') {
       dispatch({ type: "DARKMODE" });
     }else {
       dispatch({ type: "LIGHTMODE" });

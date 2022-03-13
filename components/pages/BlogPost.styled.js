@@ -47,7 +47,6 @@ export const MarkdownWrapper = styled.div`
 export const PublishedText = styled.p`
   font-size: 0.75em;
   line-height: 1.5em;
-  margin-bottom: 24px;
   font-weight: 500;
   color: ${props => props.theme.colors.primary};
   text-transform: uppercase;
@@ -68,4 +67,11 @@ export const BackText = styled.p`
   margin-left: 12px;
   font-weight: 600;
   color: ${props => props.theme.colors.secondary};
+`;
+
+export const PostHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 `;
