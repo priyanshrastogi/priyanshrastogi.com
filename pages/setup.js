@@ -1,16 +1,16 @@
 import Layout from '../components/layouts/Layout';
-import About from '../components/pages/About';
+import Setup from '../components/pages/Setup';
 import MetaTags from '../components/shared/MetaTags';
 
-const AboutPage = () => {
+const SetUpPage = () => {
   return (
     <>
-      <MetaTags title='About | Priyansh Rastogi'/>
+      <MetaTags title='Setup | Priyansh Rastogi'/>
       <Layout>
-        <About />
+        <Setup />
       </Layout>
     </>
   );
 }
 
-export default AboutPage;
+export default SetUpPage;

@@ -8,6 +8,10 @@ const styles = css`
     margin: 0px;
     font-family: 'Inter', sans-serif;
   }
+
+  p {
+    margin: 0px;
+  }
 `;
 
 const GlobalStyle = () => {
