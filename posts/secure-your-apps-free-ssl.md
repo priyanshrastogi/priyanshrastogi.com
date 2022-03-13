@@ -82,10 +82,8 @@ Follow [this link](https://certbot.eff.org/docs/using.html#renewal) to know more
 
 That’s it for now. You can reach out if you have any questions or just leave a response below.
 
-Follow Searching for X for more posts on Programming and Technology.
-
 Thank you for reading.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [July 28, 2018](https://medium.com/p/77d3beb1a0ff).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [July 28, 2018](https://medium.com/p/77d3beb1a0ff).
 
 [Canonical link](https://medium.com/@priyanshrastogi/secure-your-web-applications-with-free-lets-encrypt-ssl-77d3beb1a0ff)

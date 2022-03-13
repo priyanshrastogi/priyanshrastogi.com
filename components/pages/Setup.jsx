@@ -31,7 +31,7 @@ const Setup = () => {
         <Title>Mi Soundbar</Title> - I use it as external speakers. It can connect to mac as well as external monitor as well as PS4 via bluetooth or AUX. It has 8 speaker drivers and gets pretty loud.
       </Item>
       <Item>
-        <Title>Kindle Paperwhite</Title> - This is probably one of the best gadgets I own. I use it read books (mostly non-fiction).
+        <Title>Kindle Paperwhite</Title> - This is probably one of the best gadgets I own. I use it to read books (mostly non-fiction).
       </Item>
     </SetupWrapper>
   );

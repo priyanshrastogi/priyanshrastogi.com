@@ -28,10 +28,6 @@ WhatsApp was made for messaging. It was the app which changed the experience of 
 
 WhatsApp already have a huge user base. So people, who didn’t like this new update, definitely won’t leave WhatsApp because their family and friends are still using it. So it is still a win-win for WhatsApp. But change happens. This is what happened with Atari, Yahoo, and Orkut. One mistake, and it destroyed them. WhatsApp will have to restore it’s previous simple UI. A easy-to-use UI fascinates most population of the world. Having this story feature is fine but the app should look more like messaging oriented since it was the main motto of WhatsApp, “Connect people with the simplest way possible”.
 
-Thank You for your time. If you liked this Story. Please hit the green floating button with heart icon.
-
-You can follow this publication for future updates.
-
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [February 24, 2017](https://medium.com/p/80ba20b51560).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [February 24, 2017](https://medium.com/p/80ba20b51560).
 
 [Canonical link](https://medium.com/@priyanshrastogi/snapchat-on-whatsapp-good-or-bad-80ba20b51560)

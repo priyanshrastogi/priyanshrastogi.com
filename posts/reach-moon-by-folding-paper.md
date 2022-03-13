@@ -29,6 +29,6 @@ Thank you for your time. If you liked the post please hit the red heart button.
 
 Follow the publication for more **Crazy Math Facts**.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [June 4, 2017](https://medium.com/p/432af783c1d7).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [June 4, 2017](https://medium.com/p/432af783c1d7).
 
 [Canonical link](https://medium.com/@priyanshrastogi/crazy-math-how-to-reach-the-moon-by-folding-a-paper-432af783c1d7)

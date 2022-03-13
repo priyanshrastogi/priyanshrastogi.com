@@ -112,8 +112,8 @@ That’s it for now.
 
 Thank you for your time.
 
-Feel free to reach out if you have any questions or just comment below.
+Feel free to reach out if you have any questions.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [July 12, 2018](https://medium.com/p/4223cf160dac).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [July 12, 2018](https://medium.com/p/4223cf160dac).
 
 [Canonical link](https://medium.com/@priyanshrastogi/full-stack-development-for-dummies-4223cf160dac)

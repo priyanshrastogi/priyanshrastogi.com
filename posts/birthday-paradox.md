@@ -34,10 +34,8 @@ This P(A) is a non-linear function. As number of persons in a group grows, the p
 
 Our brain is bad at grasping non-linear functions. Which is why our intuition was wrong and the answer seemed impossible at first. But once we understand the Math behind it, It starts making sense.
 
-Please hit the red heart button if you like this Crazy Math Fact. Follow this publication for more.
-
 Thank you for your time.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [May 31, 2017](https://medium.com/p/62a1ed2b7999).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [May 31, 2017](https://medium.com/p/62a1ed2b7999).
 
 [Canonical link](https://medium.com/@priyanshrastogi/crazy-math-the-birthday-paradox-62a1ed2b7999)

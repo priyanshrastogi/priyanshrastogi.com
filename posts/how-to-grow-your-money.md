@@ -16,7 +16,7 @@ Lessons on savings taxes as well as protecting and growing your money.
 
 Photo by [Aditya Vyas](https://unsplash.com/@aditya1702?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)
 
-This is the second part of the Personal Finance for Millennials series. If you haven’t read part 1 yet, [read it here](https://blog.priyanshrastogi.com/how-to-not-lose-your-money-personal-finance-for-millennials-part-1-d9185ac1a5a4).
+This is the second part of the Personal Finance for Millennials series. If you haven’t read part 1 yet, [read it here](https://priyanshrastogi.com/blog/how-to-not-lose-your-money).
 
 ### How and where to invest your money
 
@@ -193,6 +193,6 @@ Time and patience are the two most important things when it comes to investing. 
 
 Investing in money-making assets is a great way to create wealth. However, you should also invest in yourself to make yourself better, learn new skills to make more money. If you have more money to invest, you can always create more wealth.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [April 19, 2021](https://medium.com/p/ce2e6687887c).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [April 19, 2021](https://medium.com/p/ce2e6687887c).
 
 [Canonical link](https://medium.com/@priyanshrastogi/how-to-grow-your-money-personal-finance-for-millennials-part-2-ce2e6687887c)

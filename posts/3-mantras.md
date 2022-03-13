@@ -28,8 +28,6 @@ When Elon Musk was in 3rd or 4th grade, he ran out of books to read at the schoo
 
 —
 
-Thank You for your time. I’m still a beginner in blogging. So apologies for mistakes.
-
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [January 22, 2017](https://medium.com/p/e3d6b7ac85fb).
+Originally published on Medium by [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [January 22, 2017](https://medium.com/p/e3d6b7ac85fb).
 
 [Canonical link](https://medium.com/@priyanshrastogi/3-mantras-that-changed-my-life-this-month-e3d6b7ac85fb)

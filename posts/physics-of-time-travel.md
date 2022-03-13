@@ -24,6 +24,6 @@ Like I said, Time travel is possible in the forward direction, not in the backwa
 
 Einstein’s Special Relativity Theory allows the possibility of time travel but I am not sure if we can achieve that, atleast for next 50 years.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [April 6, 2017](https://medium.com/p/c6abaf44a1d6).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [April 6, 2017](https://medium.com/p/c6abaf44a1d6).
 
 [Canonical link](https://medium.com/@priyanshrastogi/the-physics-of-time-travel-c6abaf44a1d6)

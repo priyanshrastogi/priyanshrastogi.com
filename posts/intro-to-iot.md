@@ -243,8 +243,6 @@ Now you can see the graph on [http://localhost:4000](http://localhost:4000) or y
 
 Thank you for your time!
 
-Hit the Clap button if you liked this post.
-
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [February 15, 2018](https://medium.com/p/cb4885d176c4).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [February 15, 2018](https://medium.com/p/cb4885d176c4).
 
 [Canonical link](https://medium.com/@priyanshrastogi/introduction-to-internet-of-things-with-arduino-node-js-and-chart-js-cb4885d176c4)

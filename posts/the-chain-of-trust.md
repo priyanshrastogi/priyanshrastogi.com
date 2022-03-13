@@ -32,6 +32,6 @@ Long live blockchain.
 
 Thank you for reading. Have a nice day.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [October 13, 2017](https://medium.com/p/5961e5b0fb16).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [October 13, 2017](https://medium.com/p/5961e5b0fb16).
 
 [Canonical link](https://medium.com/@priyanshrastogi/the-chain-of-trust-blockchain-5961e5b0fb16)

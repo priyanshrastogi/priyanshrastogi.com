@@ -33,10 +33,6 @@ So here is the fact: **Every time you shuffle a deck of cards, chances are that 
 
 So the next time it’s your turn to shuffle, take a moment to remember that you’re holding something that may have never before existed and may never exist again.
 
-Thank you for your time. Follow this publication for more **Crazy Math** facts. Please hit the red heart button to recommend the post.
-
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [May 22, 2017](https://medium.com/p/7afe34c8dcb3).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [May 22, 2017](https://medium.com/p/7afe34c8dcb3).
 
 [Canonical link](https://medium.com/@priyanshrastogi/crazy-math-every-time-you-shuffle-a-deck-of-cards-chances-are-that-you-make-history-7afe34c8dcb3)
-
-Exported from [Medium](https://medium.com) on March 6, 2022.

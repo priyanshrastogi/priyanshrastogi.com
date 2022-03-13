@@ -119,11 +119,8 @@ Example: If you invest INR 10,000 every month for 10 years and get annualized RO
 
 I hope now you understand why you should start investing as early as possible.
 
-In the next part of this series, I discuss various investment assets you can use to invest your money. Here is the [link to Part 2](https://blog.priyanshrastogi.com/how-to-grow-your-money-personal-finance-for-millennials-part-2-ce2e6687887c)
+In the next part of this series, I discuss various investment assets you can use to invest your money. Here is the [link to Part 2](https://priyanshrastogi.com/blog/how-to-grow-your-money)
 
-[**How to grow your money — Personal Finance for Millennials Part 2**  
-_Lessons on savings taxes as well as protecting and growing your money._blog.priyanshrastogi.com](https://blog.priyanshrastogi.com/how-to-grow-your-money-personal-finance-for-millennials-part-2-ce2e6687887c "https://blog.priyanshrastogi.com/how-to-grow-your-money-personal-finance-for-millennials-part-2-ce2e6687887c")[](https://blog.priyanshrastogi.com/how-to-grow-your-money-personal-finance-for-millennials-part-2-ce2e6687887c)
-
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [April 18, 2021](https://medium.com/p/d9185ac1a5a4).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [April 18, 2021](https://medium.com/p/d9185ac1a5a4).
 
 [Canonical link](https://medium.com/@priyanshrastogi/how-to-not-lose-your-money-personal-finance-for-millennials-part-1-d9185ac1a5a4)

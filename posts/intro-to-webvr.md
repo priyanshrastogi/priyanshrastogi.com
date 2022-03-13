@@ -28,7 +28,7 @@ All you have to do is add `<script src="https://aframe.io/releases/0.9.2/aframe.
 
 This is what `index.html` will look like.
 
-```
+~~~html
 <html>  
   <head>  
     <title>Intro to WebVR</title>  
@@ -37,7 +37,7 @@ This is what `index.html` will look like.
   <body>  
   </body>  
 </html>
-```
+~~~
 
 **Step 3: Create a Scene and Add Sky and Floor.**
 
@@ -47,12 +47,12 @@ All the components of the application are called `entity` and we use `a-entity` 
 
 Now let’s write some code. Add these lines under the body tag
 
-```
+~~~html
 <a-scene>  
   <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>  
   <a-sky color="#ECECEC"></a-sky>  
 </a-scene>
-```
+~~~
 
 Now you can open the HTML file in a browser and you will be able to see this.
 
@@ -64,11 +64,11 @@ Now you can open the HTML file in a browser and you will be able to see this.
 
 Now I will add these three components to the `a-scene` (under `a-scene` tag).
 
-```
+~~~html
 <a-text position="0 3 -4" value="Hello World" width="10" color="#000000" align="center"></a-text>  
 <a-triangle color="blue" rotation="-90 0 0" position="0 0.2 -3"></a-triangle>  
 <a-cone color="tomato" radius-bottom="2" radius-top="0.5" position="0 4 -6"></a-cone>
-```
+~~~
 
 Now this is how it will look like:
 
@@ -80,13 +80,13 @@ I have used `a-text` , `a-triangle` , `a-cone` tags to create these entities. 
 
 Adding an image is easy. A good way is to load the image as `a-assets` and use that as the source of `a-image` . Add this code under `a-scene` .
 
-```
+~~~html
 <a-assets>  
   <img id="dog" src="dog.png">  
 </a-assets>
 
 <a-image src="#dog" position="0 1 -3"></a-image>
-```
+~~~
 
 In Aframe `a-scene` , all the entities are rendered with absolute positioning. So the order of the entities does not matter. Now let’s view the application.
 
@@ -100,9 +100,9 @@ Our application doesn’t look that good. So I will add a better background. I a
 
 Add this line under `a-scene` and remove `a-sky` and `a-plane`.
 
-```
+~~~html
 <a-entity environment="preset: forest"></a-entity>
-```
+~~~
 
 ![](https://cdn-images-1.medium.com/max/800/1*Ap-FNWG2ZVklSba24vcHZQ.png)
 
@@ -112,13 +112,13 @@ For this step, you will need a VR headset. I am using Oculus Go, you can use any
 
 Add this `a-entity` under `a-scene` .
 
-```
+~~~html
 <a-entity>  
   <a-entity camera position="0 1.5 0" look-controls></a-entity>  
   <a-entity oculus-go-controls></a-entity>  
   <a-entity laser-controls="hand: right"></a-entity>  
 </a-entity>
-```
+~~~
 
 If you open this webpage in Oculus Go Browser and enter VR mode. You will be able to experience this scene in 360-degree view. You will also see a laser that can be controlled using the controller.
 
@@ -128,24 +128,24 @@ This is the complete code till step 7.
 
 You can add events like do some animation when laser collides with a component or do something when the user presses the trigger.
 
-```
+~~~html
 <script>  
 document.getElementById('myCard').addEventListener('click', () => {  
   //do something  
 })  
 </script>
-```
+~~~
 
 To animate on hover, you will have to define an entity like this:
 
-```
+~~~html
 <a-entity id="box" geometry="primitive: box" position="0 1.8 -3" animation\_\_mouseenter="property: scale; from: 1 1 1; to: 1.5 1.5 1.5; startEvents: mouseenter; dur: 200" animation\_\_mouseleave="property: scale; from: 1.5 1.5 1.5; to: 1 1 1; startEvents: mouseleave; dur: 200"></a-entity>
-```
+~~~
 
 I will soon publish an advanced guide on WebVR that will cover events, animations in depth.
 
 Thank you for your time.
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [October 6, 2019](https://medium.com/p/b4a57f323815).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [October 6, 2019](https://medium.com/p/b4a57f323815).
 
 [Canonical link](https://medium.com/@priyanshrastogi/an-introduction-to-virtual-reality-on-web-for-dummies-b4a57f323815)

@@ -435,6 +435,6 @@ You can also test Native Android and iOS apps of **Pizza by Express** on Expo Cl
 [**expo-stripe-checkout on Expo**  
 _Description Scan to open With an Android phone, you can scan this QR code with your Expo mobile app to load this…_expo.io](https://expo.io/@priyanshrastogi/expo-stripe-checkout "https://expo.io/@priyanshrastogi/expo-stripe-checkout")[](https://expo.io/@priyanshrastogi/expo-stripe-checkout)
 
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [June 21, 2020](https://medium.com/p/9003e26f36cb).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [June 21, 2020](https://medium.com/p/9003e26f36cb).
 
 [Canonical link](https://medium.com/@priyanshrastogi/accept-payments-in-universal-apps-with-stripe-checkout-9003e26f36cb)

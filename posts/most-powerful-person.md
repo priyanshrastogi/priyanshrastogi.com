@@ -34,8 +34,6 @@ Facebook Community Update Posted by Mark Zuckerburg
 
 Even though he has pledged to give away 99% of his Facebook stock during the course of his life, he will retain control of its board. In a multiple-class company like Facebook, The board can’t fire the CEO. Just the opposite: The CEO can fire the board, which means he can do almost anything he wants. If he wants more income, he can make the company pay out bigger dividends even if that’s bad for the business. For the rest of his life, Zuckerberg will be able to bring Facebook’s incredible power to bear in achieving whatever ends he desires.
 
-Thank you for your time. Please hit the green heart button if you liked this post.
-
-By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [March 4, 2017](https://medium.com/p/b3b36daa69ab).
+Originally published on Medium By [Priyansh Rastogi](https://medium.com/@priyanshrastogi) on [March 4, 2017](https://medium.com/p/b3b36daa69ab).
 
 [Canonical link](https://medium.com/@priyanshrastogi/who-rules-the-world-b3b36daa69ab)
