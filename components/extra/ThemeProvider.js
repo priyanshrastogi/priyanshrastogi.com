@@ -8,11 +8,14 @@ const ThemeProvider = ({ children }) => {
   const { state, dispatch } = useContext(ToggleThemeContext);
 
   useEffect(() => {
-    const mode = localStorage.getItem('mode');
-    if (mode === 'light') {
+    const preference = localStorage.getItem('mode');
+    const darkMode = window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (preference === 'light') {
       dispatch({ type: "LIGHTMODE" });
-    } else {
+    } else if(darkMode) {
       dispatch({ type: "DARKMODE" });
+    }else {
+      dispatch({ type: "LIGHTMODE" });
     }
   }, []);
 
