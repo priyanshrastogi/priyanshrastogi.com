@@ -3,7 +3,7 @@ import { createContext, useReducer } from "react";
 export const ToggleThemeContext = createContext();
 
 const initialState = {
-  darkMode: typeof window === 'undefined' ? true : localStorage.getItem('mode') === 'light' ? false : true,
+  darkMode: true,
 };
 
 const themeReducer = (state, action) => {
