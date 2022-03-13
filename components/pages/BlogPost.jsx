@@ -1,12 +1,20 @@
+import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { MarkdownWrapper } from './BlogPost.styled';
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { BackText, BackWrapper, BlogPostWrapper, Divider, MarkdownWrapper, PublishedText } from './BlogPost.styled';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { FaArrowLeft } from 'react-icons/fa';
+import { useTheme } from '@emotion/react';
+import Link from 'next/link';
 
-const BlogPost = ({ content }) => {
+const BlogPost = ({ content, metadata }) => {
+
+  const theme = useTheme();
+
   return (
-    <>
+    <BlogPostWrapper>
+      <PublishedText>Published on {moment(metadata.date).format('MMM DD, YYYY')}</PublishedText>
       <MarkdownWrapper>
         <ReactMarkdown
           children={content}
@@ -31,7 +39,14 @@ const BlogPost = ({ content }) => {
           }}
         />
       </MarkdownWrapper>
-    </>
+      <Divider />
+      <Link href="/blog" passHref>
+        <BackWrapper>
+          <FaArrowLeft size={20} color={theme.colors.secondary} />
+          <BackText>Back to All Posts</BackText>
+        </BackWrapper>
+      </Link>
+    </BlogPostWrapper>
   );
 }
 

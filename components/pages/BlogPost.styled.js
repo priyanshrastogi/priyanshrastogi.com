@@ -1,12 +1,18 @@
 import styled from '@emotion/styled';
 
-export const BlogPostWrapper = styled.div``;
+export const BlogPostWrapper = styled.div`
+  padding-bottom: 18px;
+`;
 
 export const MarkdownWrapper = styled.div`
   color: ${props => props.theme.colors.secondary};
 
   p {
     margin-bottom: 24px;
+    line-height: 1.75em;
+  }
+
+  li {
     line-height: 1.75em;
   }
 
@@ -36,4 +42,30 @@ export const MarkdownWrapper = styled.div`
     border-color: ${props => props.theme.colors.primary};
     padding-left: 20px;
   }
+`;
+
+export const PublishedText = styled.p`
+  font-size: 0.75em;
+  line-height: 1.5em;
+  margin-bottom: 24px;
+  font-weight: 500;
+  color: ${props => props.theme.colors.primary};
+  text-transform: uppercase;
+`;
+
+export const Divider = styled.hr`
+  margin: 36px 0px 24px;
+`;
+
+export const BackWrapper = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+`;
+
+export const BackText = styled.p`
+  font-size: 1.25em;
+  margin-left: 12px;
+  font-weight: 600;
+  color: ${props => props.theme.colors.secondary};
 `;

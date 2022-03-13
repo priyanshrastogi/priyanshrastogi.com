@@ -74,9 +74,10 @@ export const Link = styled.a`
   }
 `;
 
-export const ThemeMode = styled.img`
-  height: 20px;
-  width: 20px;
-  margin-bottom: 8px;
+export const ThemeMode = styled.div`
   cursor: pointer;
+
+  svg {
+    margin: 0px;
+  }
 `

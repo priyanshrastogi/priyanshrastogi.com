@@ -10,7 +10,7 @@ const BlogPostPage = ({ metadata, content }) => {
     <>
       <MetaTags title={`${metadata.title} | Priyansh Rastogi`} description={metadata.excerpt} />
       <Layout hideHeader>
-        <BlogPost content={content} />
+        <BlogPost content={content} metadata={metadata} />
       </Layout>
     </>
   );
