@@ -1,9 +1,9 @@
 import { Fragment, useEffect } from 'react';
 import Router from 'next/router';
 import * as gtag from '../components/extra/gtag';
-import { ThemeProvider } from '@emotion/react';
-import theme from '../styles/theme';
 import GlobalStyle from '../styles/global';
+import { ToggleThemeProvider } from '../components/extra/ToggleThemeContext';
+import ThemeProvider from '../components/extra/ThemeProvider';
 
 const App = ({ Component, pageProps }) => {
   
@@ -16,13 +16,15 @@ const App = ({ Component, pageProps }) => {
       Router.events.off('routeChangeComplete', handleRouteChange);
     }
   }, []);
-  
+
   return (
     <Fragment>
       <GlobalStyle />
-      <ThemeProvider theme={theme.dark}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ToggleThemeProvider>
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ToggleThemeProvider>
     </Fragment>
   );
 }

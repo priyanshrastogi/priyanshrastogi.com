@@ -9,6 +9,7 @@ const gradients = {
 
 const theme = {
   light: {
+    mode: 'light',
     background: '#F9F7F7',
     colors: {
       primary: '#3F72AF',
@@ -18,6 +19,7 @@ const theme = {
     gradients,
   },
   dark: {
+    mode: 'dark',
     background: '#080708',
     colors: {
       primary: '#3772FF',

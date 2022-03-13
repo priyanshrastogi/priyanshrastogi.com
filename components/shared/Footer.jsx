@@ -1,4 +1,4 @@
-import { Divider, FooterText, FooterWrapper, Link, SocialLinks, ThemeMode } from "./Footer.styled"
+import { Divider, FooterText, FooterWrapper, Link, SocialLinks } from "./Footer.styled"
 
 const Footer = () => {
   return (
@@ -18,9 +18,6 @@ const Footer = () => {
       <FooterText>
         Powered by Next.js, Hosted on Vercel.
       </FooterText>
-      <ThemeMode>
-        <FooterText></FooterText>
-      </ThemeMode>
     </FooterWrapper>
   );
 }

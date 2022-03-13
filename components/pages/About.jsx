@@ -51,7 +51,7 @@ const About = () => {
         </WorkItem>
       </WorkWrapper>
       <Title>Education</Title>
-      <Description>I graduated with a major in Computer Science and Engineer from Shiv Nadar University in 2019. During my undergrad, I published a research paper in the field of Internet of Things. The paper was presented in an IEEE conference and has been published in IEEE. It can be found here.</Description>
+      <Description>I graduated with a major in Computer Science and Engineering from Shiv Nadar University in 2019. During my undergrad, I published a research paper in the field of Internet of Things. The paper was presented in an IEEE conference and has been published in IEEE. It can be found <a href="https://ieeexplore.ieee.org/document/8653764" target="_blank">here</a>.</Description>
       <Title>Personal Stuff</Title>
       <Description>I am currently living in Gurgaon, India. Though I come from a town known as Ladnun in the state of Rajasthan. When I am not coding, I can be found playing video games, or listening to classical music. I also love exploring new places for food.</Description>
       

@@ -38,5 +38,3 @@ export const Link = styled.a`
     line-height: 1em;
   }
 `;
-
-export const ThemeMode = styled.div``;

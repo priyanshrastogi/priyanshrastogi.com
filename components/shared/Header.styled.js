@@ -46,3 +46,37 @@ export const Description = styled.p`
 export const Divider = styled.hr`
   margin: 24px 0px 36px;
 `;
+
+export const MenuWrapper = styled.div`
+  margin: -24px 0px -18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const MenuLinks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const Link = styled.a`
+  color: ${props => props.active ? props.theme.colors.secondary : props.theme.colors.primary };
+  font-size: 1.2em;
+  line-height: 1.8em;
+  text-decoration: none;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  font-weight: ${props => props.active ? '600' : '400'};
+
+  @media only screen and (max-width: 812px) {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+`;
+
+export const ThemeMode = styled.img`
+  height: 20px;
+  width: 20px;
+  margin-bottom: 8px;
+  cursor: pointer;
+`

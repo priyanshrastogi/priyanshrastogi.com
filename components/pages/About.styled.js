@@ -17,6 +17,11 @@ export const Description = styled.p`
     font-size: 1em;
     line-height: 1.5em;
   }
+  
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.primary};
+  }
 `;
 
 export const WorkWrapper = styled.div`
