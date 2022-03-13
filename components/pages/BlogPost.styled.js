@@ -7,6 +7,7 @@ export const MarkdownWrapper = styled.div`
 
   p {
     margin-bottom: 24px;
+    line-height: 1.75em;
   }
 
   img {
@@ -25,5 +26,14 @@ export const MarkdownWrapper = styled.div`
   a {
     text-decoration: none;
     color: ${props => props.theme.colors.primary};
+  }
+
+  blockquote {
+    margin-left: 1rem;
+    font-style: italic;
+    font-size: 1.4rem;
+    border-left: 3px solid;
+    border-color: ${props => props.theme.colors.primary};
+    padding-left: 20px;
   }
 `;

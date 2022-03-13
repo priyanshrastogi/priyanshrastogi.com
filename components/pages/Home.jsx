@@ -21,7 +21,7 @@ const Home = ({ blogPosts }) => {
       <PostList posts={blogPosts} viewAll={showAllPosts} setViewAll={setShowAllPosts} />
       <Divider />
       <ShortBio>
-        <BioText>Fullstack Engineer based in Gurgaon, India. Currently working on payments at Vested Finance. Passionate about building products, fintech and cooking.</BioText>
+        <BioText>Fullstack Engineer based in Gurgaon, India. Currently working on neobanking and payments at Vested Finance. Passionate about building products, fintech and cooking.</BioText>
         <FlexEnd>
           <PageLink variant="deepBlue" href="/about" passHref>Find out more</PageLink><br/>
         </FlexEnd>
