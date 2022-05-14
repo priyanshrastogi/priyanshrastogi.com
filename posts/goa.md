@@ -31,10 +31,10 @@ I have never been to beaches before. So far, I have been to hills a couple of ti
 
 ![](/images/goa/beach.jpg)
 Me, posing on Candolim Beach for the gram.
-Superior shot by [Ankit](https://instagram.com/_ankitgehlot).
+Spectacular shot by [Ankit](https://instagram.com/_ankitgehlot).
 
 ## Food
-I am a big-time foodie, and I love to explore new places for different cuisines and drinks. I tried some things for the first time, e.g. Squid, Fish and Chips, Goan style roasted pork etc. and liked all of them. We also went to a fancy Asian restaurant, "Yazu", where we ordered some Sushi platters. I have never used chopsticks before, so I'd tell you that I have never made more efforts in my life for food than I made in eating that Sushi with those fuckin' chopsticks. Even after those efforts, Sushi just fell apart.
+I am a big-time foodie, and I love to explore new places for different cuisines and drinks. I tried some things for the first time, e.g. Squid, Goan style roasted pork, Red snapper, Raw salmon etc. and liked all of them. We also went to a fancy Asian restaurant, "Yazu", where we ordered some Sushi platters. This was my first time using chopsticks, and trust me, I have never made this much effort in my life to eat Sushi with those fucking chopsticks. Even after that, Sushi just fell apart in the end.
 
 Now it's time for some restaurant recommendations:
 * **Yazu** - It's an Asian restaurant, part of Marquis Beach Resort at Candolim beach. It's a bit expensive (as all Asian cuisine restaurants are), and you'll need to make a reservation in advance. You'll love the food if you're into Japanese, Chinese or Thai food.
@@ -44,7 +44,7 @@ Now it's time for some restaurant recommendations:
 * **Garden of Dreams** - Situated in Arambol, Garden of Dreams is a pure vegetarian cafe. It offers a good variety of Italian, French and Portuguese sandwiches, which are pretty good. As it is designed as a place to chill in a dense garden, it could also be a perfect place for a date.
 
 ![](/images/goa/yazu.jpg)
-Non-veg Sushi Platter at Yazu.
+Sushi Platter at Yazu.
 
 ![](/images/goa/purplemartini.jpg)
 Fish & Chips with Beer at The Purple Martini. (with sea in background)
@@ -66,7 +66,7 @@ I met Deepika, who runs a dream-chaser craft [business](https://instagram.com/sv
 I also met Mansi, a remarkable girl, on her solo trip to Goa. Again, we had a meaningful conversation ranging from EdTech startups exploiting people, food, movies and whatnot. After we met in Goa, we ended up becoming good friends. We met again on my recent trip to Mumbai this month.
 
 ## Failed Scuba Diving Attempt
-I have always been afraid of water, but I decided to give Scuba Diving a shot this time because they said swimming is not a requirement. Goa is probably one of the worst places in the world to do Scuba diving. There's no proper training. As soon as you go down into the water from the boat, divers (so-called instructors) will tie oxygen tank equipment to your body. In legit 1 min, they'll ask you to go underwater without properly training you to control your breathing and heartbeats underwater. In my case, it took me at least 5 minutes and 2 instructors to calm my breathing and teach me how to breathe with a regulator underwater. Still, as soon as I went underwater, I felt I couldn't breathe. I signed the instructor to pull me out. And I didn't do it. I'll probably learn swimming first before doing scuba diving again. Though I am never going to Goa (on any place in India) for it, Maldives or Dubai are far better in safety, hygiene and proper training.
+I have always been afraid of water, but I decided to give Scuba Diving a shot this time because they said swimming is not a requirement. Goa is probably one of the worst places in the world to do Scuba diving. There's no proper training. As soon as you go down into the water from the boat, divers (so-called instructors) will tie oxygen tank equipment to your body. In legit 1 min, they'll ask you to go underwater without properly training you to control your breathing and heartbeats underwater. In my case, it took me at least 5 minutes and 2 instructors to calm my breathing and teach me how to breathe with a regulator underwater. Still, as soon as I went underwater, I felt I couldn't breathe. I signed the instructor to pull me out. And I didn't do it. I'll probably learn swimming first before doing scuba diving again. Though I am never going to Goa (or any place in India) for Scuba ever again. I'd rather to go Maldives or Dubai, which are far better in safety, hygiene and proper training.
 
 ## The Gang
 
