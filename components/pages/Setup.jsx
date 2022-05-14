@@ -25,6 +25,9 @@ const Setup = () => {
         <Title>Airpods Pro</Title> - I use it as primary earphones. They connect seamlessly with my phone and mac. Active Noise Cancellation makes it just perfect.
       </Item>
       <Item>
+        <Title>Apple Watch Series 7</Title> - I use it as a smartwatch to track my daily movements and exercise.
+      </Item>
+      <Item>
         <Title>PlayStation 4</Title> - I use it to play video games. I have played Red Dead Redemption 2, Ghost of Tshushima, God of War, Assassin's Creed Odyssey and Valhalla.
       </Item>
       <Item>
