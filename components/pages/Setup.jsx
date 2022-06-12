@@ -31,7 +31,7 @@ const Setup = () => {
         <Title>PlayStation 4</Title> - I use it to play video games. I have played Red Dead Redemption 2, Ghost of Tshushima, God of War, Assassin's Creed Odyssey and Valhalla.
       </Item>
       <Item>
-        <Title>Mi Soundbar</Title> - I use it as external speakers. It can connect to mac as well as external monitor as well as PS4 via bluetooth or AUX. It has 8 speaker drivers and gets pretty loud.
+        <Title>Marshall Emberton</Title> - I use it as a bluetooth portable speaker. It looks tiny but it gets pretty loud and has a punchy bass. Definitely worth the money.
       </Item>
       <Item>
         <Title>Kindle Paperwhite</Title> - This is probably one of the best gadgets I own. I use it to read books (mostly non-fiction).
